@@ -1,0 +1,849 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`git-log should work correctly 1`] = `
+Array [
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "a52071130140caa805cf4ab8bbe4ca178886bb11",
+    "date": "Fri Mar 16 11:28:35 2018 +1100",
+    "message": "Apply \`yarn format\` to package.json",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "88e99b0809d9b73021385988c316173c9f10e8f0",
+    "date": "Thu Mar 15 19:11:29 2018 +0000",
+    "message": "Bump rollup from 0.56.5 to 0.57.0
+
+Bumps [rollup](https://github.com/rollup/rollup) from 0.56.5 to 0.57.0.
+- [Release notes](https://github.com/rollup/rollup/releases)
+- [Changelog](https://github.com/rollup/rollup/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/rollup/rollup/compare/v0.56.5...v0.57.0)
+
+Signed-off-by: dependabot[bot] <support@dependabot.com>",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "120d474cb142fb8be06e244eade53e436ec2249a",
+    "date": "Thu Mar 15 19:11:58 2018 +0000",
+    "message": "Bump flow-bin from 0.67.1 to 0.68.0
+
+Bumps [flow-bin](https://github.com/flowtype/flow-bin) from 0.67.1 to 0.68.0.
+- [Release notes](https://github.com/flowtype/flow-bin/releases)
+- [Commits](https://github.com/flowtype/flow-bin/compare/v0.67.1...v0.68.0)
+
+Signed-off-by: dependabot[bot] <support@dependabot.com>",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "1cab7d26c09a1bb076f550ae12a6cc30be0495e2",
+    "date": "Mon Mar 12 19:12:44 2018 +0000",
+    "message": "Bump rollup-plugin-commonjs from 9.0.0 to 9.1.0
+
+Bumps [rollup-plugin-commonjs](https://github.com/rollup/rollup-plugin-commonjs) from 9.0.0 to 9.1.0.
+- [Changelog](https://github.com/rollup/rollup-plugin-commonjs/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/rollup/rollup-plugin-commonjs/compare/v9.0.0...v9.1.0)
+
+Signed-off-by: dependabot[bot] <support@dependabot.com>",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "cc8cd402525e97434bae2f77909d61f98733fbf8",
+    "date": "Tue Mar 13 19:12:41 2018 +0000",
+    "message": "Bump captain-git-hook from 1.1.1 to 2.0.0
+
+Bumps [captain-git-hook](https://github.com/maxhoffmann/captain-git-hook) from 1.1.1 to 2.0.0.
+- [Commits](https://github.com/maxhoffmann/captain-git-hook/commits)
+
+Signed-off-by: dependabot[bot] <support@dependabot.com>",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "9906a0ab323af0975b2d1d262cf60de5fd298bf9",
+    "date": "Thu Mar 8 19:11:51 2018 +0000",
+    "message": "Bump flow-bin from 0.66.0 to 0.67.1
+
+Bumps [flow-bin](https://github.com/flowtype/flow-bin) from 0.66.0 to 0.67.1.
+- [Commits](https://github.com/flowtype/flow-bin/compare/v0.66.0...v0.67.1)
+
+Signed-off-by: dependabot[bot] <support@dependabot.com>",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "7cae9fd0fcf3a3cb9e779b3215a32ae2708a1b14",
+    "date": "Wed Mar 7 23:46:39 2018 +0000",
+    "message": "Bump rollup from 0.56.4 to 0.56.5
+
+Bumps [rollup](https://github.com/rollup/rollup) from 0.56.4 to 0.56.5.
+- [Changelog](https://github.com/rollup/rollup/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/rollup/rollup/compare/v0.56.4...v0.56.5)
+
+Signed-off-by: dependabot[bot] <support@dependabot.com>",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "b8fcfe26a05475baca7b7412ab5c81922a20a9bf",
+    "date": "Fri Mar 9 09:13:36 2018 +1100",
+    "message": "Update \`build/index.js\`",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "f4cd32857b6eb311075695fc4a353b5d336348ff",
+    "date": "Wed Mar 7 19:11:22 2018 +0000",
+    "message": "Bump rollup-plugin-node-resolve from 3.0.3 to 3.2.0
+
+Bumps [rollup-plugin-node-resolve](https://github.com/rollup/rollup-plugin-node-resolve) from 3.0.3 to 3.2.0.
+- [Changelog](https://github.com/rollup/rollup-plugin-node-resolve/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/rollup/rollup-plugin-node-resolve/compare/v3.0.3...v3.2.0)
+
+Signed-off-by: dependabot[bot] <support@dependabot.com>",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "017376f46c7c1980c0f751ea6185a2ddf3344dd6",
+    "date": "Wed Mar 7 13:10:33 2018 +1100",
+    "message": "v1.2.3",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "b1d6fa81140c28fe66556792b8b260bccfe65222",
+    "date": "Tue Mar 6 19:11:46 2018 +0000",
+    "message": "Bump rollup-plugin-commonjs from 8.4.1 to 9.0.0
+
+Bumps [rollup-plugin-commonjs](https://github.com/rollup/rollup-plugin-commonjs) from 8.4.1 to 9.0.0.
+- [Changelog](https://github.com/rollup/rollup-plugin-commonjs/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/rollup/rollup-plugin-commonjs/compare/v8.4.1...v9.0.0)
+
+Signed-off-by: dependabot[bot] <support@dependabot.com>",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "0db05b32804ab7a1738e5ee91408f271bc0b836a",
+    "date": "Tue Mar 6 17:01:03 2018 +1100",
+    "message": "Change arguments -> args",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "76660e5d97fedf26f43c7bba62f873f29ac2fcfe",
+    "date": "Mon Mar 5 19:13:19 2018 +0000",
+    "message": "Bump eslint from 4.18.1 to 4.18.2
+
+Bumps [eslint](https://github.com/eslint/eslint) from 4.18.1 to 4.18.2.
+- [Release notes](https://github.com/eslint/eslint/releases/tag/v4.18.2)
+- [Changelog](https://github.com/eslint/eslint/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/eslint/eslint/compare/v4.18.1...v4.18.2)
+
+Signed-off-by: dependabot[bot] <support@dependabot.com>",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "13a8ed4050258264a9eb0d3eb361e52c60e595d3",
+    "date": "Mon Mar 5 19:14:07 2018 +0000",
+    "message": "Bump rollup from 0.56.3 to 0.56.4
+
+Bumps [rollup](https://github.com/rollup/rollup) from 0.56.3 to 0.56.4.
+- [Changelog](https://github.com/rollup/rollup/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/rollup/rollup/compare/v0.56.3...v0.56.4)
+
+Signed-off-by: dependabot[bot] <support@dependabot.com>",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "1b2a7a89d7764a48538e82b3a7ccfae850355a7a",
+    "date": "Mon Mar 5 19:12:45 2018 +0000",
+    "message": "Bump rollup-plugin-commonjs from 8.3.0 to 8.4.1
+
+Bumps [rollup-plugin-commonjs](https://github.com/rollup/rollup-plugin-commonjs) from 8.3.0 to 8.4.1.
+- [Changelog](https://github.com/rollup/rollup-plugin-commonjs/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/rollup/rollup-plugin-commonjs/commits)
+
+Signed-off-by: dependabot[bot] <support@dependabot.com>",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "27803e6cecb65ab8a82504c207109909bacdf431",
+    "date": "Thu Mar 1 19:12:55 2018 +0000",
+    "message": "Bump prettier from 1.11.0 to 1.11.1
+
+Bumps [prettier](https://github.com/prettier/prettier) from 1.11.0 to 1.11.1.
+- [Changelog](https://github.com/prettier/prettier/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/prettier/prettier/compare/1.11.0...1.11.1)
+
+Signed-off-by: dependabot[bot] <support@dependabot.com>",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "19ac987b8c884ed35ec411d59166aeb16e117e29",
+    "date": "Tue Feb 27 19:12:22 2018 +0000",
+    "message": "Bump prettier from 1.10.2 to 1.11.0
+
+Bumps [prettier](https://github.com/prettier/prettier) from 1.10.2 to 1.11.0.
+- [Release notes](https://github.com/prettier/prettier/releases)
+- [Changelog](https://github.com/prettier/prettier/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/prettier/prettier/compare/1.10.2...1.11.0)",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "f8c11338e6ea1d1a7fd751db36def7379513e30b",
+    "date": "Mon Feb 26 19:12:38 2018 +0000",
+    "message": "Bump rollup from 0.56.2 to 0.56.3
+
+Bumps [rollup](https://github.com/rollup/rollup) from 0.56.2 to 0.56.3.
+- [Changelog](https://github.com/rollup/rollup/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/rollup/rollup/compare/v0.56.2...v0.56.3)",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "95d2a645640c465dd075135e23983229381c136e",
+    "date": "Fri Feb 23 19:12:18 2018 +0000",
+    "message": "Bump jest from 22.4.0 to 22.4.2
+
+Bumps [jest](https://github.com/facebook/jest) from 22.4.0 to 22.4.2.
+- [Changelog](https://github.com/facebook/jest/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/facebook/jest/compare/v22.4.0...v22.4.2)",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "5370343e3dba1dc57139216f56067d5bf1a3976b",
+    "date": "Thu Feb 22 19:12:22 2018 +0000",
+    "message": "Bump eslint-plugin-flowtype from 2.45.0 to 2.46.1
+
+Bumps [eslint-plugin-flowtype](https://github.com/gajus/eslint-plugin-flowtype) from 2.45.0 to 2.46.1.
+- [Release notes](https://github.com/gajus/eslint-plugin-flowtype/releases)
+- [Commits](https://github.com/gajus/eslint-plugin-flowtype/compare/v2.45.0...v2.46.1)",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "26c0994f168d7f6dea0a390cd893d4a41dbb4d57",
+    "date": "Thu Feb 22 14:01:39 2018 +1100",
+    "message": "1.2.2",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "5fb522b023c709a8484353a752280e68d3c54d2c",
+    "date": "Thu Feb 22 13:55:25 2018 +1100",
+    "message": "Add np and release script",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "4abfb412b9b1a08e6185c846d7582ee2f6bcae26",
+    "date": "Wed Feb 21 18:37:01 2018 +1100",
+    "message": "Change \`serializeSignature\` implementation",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "47bd99ae5a506b70327ec7e45199db4abba5bf0c",
+    "date": "Wed Feb 21 19:12:15 2018 +0000",
+    "message": "Bump eslint from 4.18.0 to 4.18.1
+
+Bumps [eslint](https://github.com/eslint/eslint) from 4.18.0 to 4.18.1.
+- [Release notes](https://github.com/eslint/eslint/releases/tag/v4.18.1)
+- [Changelog](https://github.com/eslint/eslint/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/eslint/eslint/compare/v4.18.0...v4.18.1)",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "007dd48983ad6ad0592959a42578f658ab93595c",
+    "date": "Tue Feb 20 19:12:05 2018 +0000",
+    "message": "Bump jest from 22.3.0 to 22.4.0
+
+Bumps [jest](https://github.com/facebook/jest) from 22.3.0 to 22.4.0.
+- [Changelog](https://github.com/facebook/jest/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/facebook/jest/compare/v22.3.0...v22.4.0)",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "bf4b2c70e542658fd4083bed848b111c361c75c7",
+    "date": "Tue Feb 20 19:12:13 2018 +0000",
+    "message": "Bump babel-eslint from 8.2.1 to 8.2.2
+
+Bumps [babel-eslint](https://github.com/babel/babel-eslint) from 8.2.1 to 8.2.2.
+- [Commits](https://github.com/babel/babel-eslint/compare/v8.2.1...v8.2.2)",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "f3fd15f48eac9044060197ccb06fd8dc0ec4abd8",
+    "date": "Mon Feb 19 19:12:27 2018 +0000",
+    "message": "Bump eslint-plugin-flowtype from 2.44.0 to 2.45.0
+
+Bumps [eslint-plugin-flowtype](https://github.com/gajus/eslint-plugin-flowtype) from 2.44.0 to 2.45.0.
+- [Release notes](https://github.com/gajus/eslint-plugin-flowtype/releases/tag/v2.45.0)
+- [Commits](https://github.com/gajus/eslint-plugin-flowtype/compare/v2.44.0...v2.45.0)",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "69887e881bf409d97ec36aa06ebad7d599b2164c",
+    "date": "Mon Feb 19 19:12:13 2018 +0000",
+    "message": "Bump flow-bin from 0.65.0 to 0.66.0
+
+Bumps [flow-bin](https://github.com/flowtype/flow-bin) from 0.65.0 to 0.66.0.
+- [Commits](https://github.com/flowtype/flow-bin/compare/v0.65.0...v0.66.0)",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "5f71bf4627a18b996027fb29e790f3dc013cacaf",
+    "date": "Mon Feb 19 19:12:43 2018 +0000",
+    "message": "Bump rollup from 0.56.1 to 0.56.2
+
+Bumps [rollup](https://github.com/rollup/rollup) from 0.56.1 to 0.56.2.
+- [Changelog](https://github.com/rollup/rollup/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/rollup/rollup/compare/v0.56.1...v0.56.2)",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "3bdbbd1e3bbd3bd2aac6398721dbed59a9f9dd2f",
+    "date": "Tue Feb 20 08:17:18 2018 +1100",
+    "message": "Add prettier to snapshots",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "3e021954cb4d94c71d286cb7e563c7982bf3ec74",
+    "date": "Mon Feb 19 08:21:32 2018 +1100",
+    "message": "Add snapshot tests to \`__tests__/overload.js\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "513320634e4ac9e6143fee578cf4ed28294b418d",
+    "date": "Sun Feb 18 22:58:14 2018 +1100",
+    "message": "Rebuild \`build/index.js\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "64d59da74d136a63da5a49e457fd4ea6ee03765b",
+    "date": "Sun Feb 18 22:57:30 2018 +1100",
+    "message": "Remove types from \`get-type\` JSDoc",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "a6a027b18af6d69b32ed1516d60d1b94f23be4f6",
+    "date": "Sun Feb 18 22:55:15 2018 +1100",
+    "message": "Remove types from JSDoc",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "0a321691b40a7db621dfb4e7b12fe90b11dae185",
+    "date": "Sun Feb 18 22:37:03 2018 +1100",
+    "message": "Add arguments to benchmarks",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "f65b04f4b5adbeebbef2ba5c73a358c7853f660d",
+    "date": "Fri Feb 16 19:11:51 2018 +0000",
+    "message": "Bump rollup from 0.55.5 to 0.56.1
+
+Bumps [rollup](https://github.com/rollup/rollup) from 0.55.5 to 0.56.1.
+- [Changelog](https://github.com/rollup/rollup/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/rollup/rollup/compare/v0.55.5...v0.56.1)",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "fbb513cbc83fed7b2b70b3c5fb861af90d91dd4b",
+    "date": "Sun Feb 18 22:02:55 2018 +1100",
+    "message": "Add coveralls badge to \`README.md\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "8d0548267a1c47c65f3b4e3950092c011056c641",
+    "date": "Sun Feb 18 21:59:56 2018 +1100",
+    "message": "Rename script \`coveralls\` to \`publish:coverage\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "1dfc7b322d97d3e37b0ff31564b8b0a07a957ec2",
+    "date": "Sun Feb 18 21:53:39 2018 +1100",
+    "message": "Add \`coveralls\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "573be40590ecc86f7caca7ed0f032167ccf68496",
+    "date": "Sun Feb 18 19:50:07 2018 +1100",
+    "message": "1.2.1",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "07a8d98c10407071b0f70b064e879aa9197028d7",
+    "date": "Sun Feb 18 19:49:32 2018 +1100",
+    "message": "Add \`__tests__\` and \`coverage\` to \`.npmignore\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "4b154dd1ece92c794f4059b34212ea5e0de46fdb",
+    "date": "Sun Feb 18 19:47:23 2018 +1100",
+    "message": "1.2.0",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "66a1c9c0589efa53f6582d715cd94af9c7890767",
+    "date": "Sun Feb 18 19:43:00 2018 +1100",
+    "message": "Add hidden files to \`.npmignore\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "d6939b249b289a808b5331a44d20efaf0e670e0d",
+    "date": "Sun Feb 18 19:41:02 2018 +1100",
+    "message": "Add check for supported types on function creation",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "dabf789ea2fa4ac39f9418333d9bb04068d7ba6c",
+    "date": "Thu Feb 15 17:47:41 2018 +1100",
+    "message": "Drop Node.js v4 support",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "982238ae11d652346200537caf4dd0fa5b163588",
+    "date": "Thu Feb 15 17:43:30 2018 +1100",
+    "message": "Migrate tests to jest",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "82458a07d5aab8b223adff1fd3fe522450c80dd8",
+    "date": "Thu Feb 15 17:19:50 2018 +1100",
+    "message": "Add commit hooks",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "457749f5d925872feebfb2d8e7e047eb7ce2add9",
+    "date": "Thu Feb 15 16:53:53 2018 +1100",
+    "message": "Fix regression bug",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "8eb7b23d683f0c9c263ae5f0083b7a021498504d",
+    "date": "Thu Feb 15 16:40:08 2018 +1100",
+    "message": "Refactor \`pair\`, \`serialize-signature\`, \`overload\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "d24c114faf1e6b715d9ed2cc72f936e0c4fec97b",
+    "date": "Thu Feb 15 16:37:31 2018 +1100",
+    "message": "Reimplement benchmarks",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "283ef63904355c44a6309f18814ca99dd0c10578",
+    "date": "Wed Feb 14 19:12:14 2018 +0000",
+    "message": "Bump rollup-plugin-node-resolve from 3.0.2 to 3.0.3
+
+Bumps [rollup-plugin-node-resolve](https://github.com/rollup/rollup-plugin-node-resolve) from 3.0.2 to 3.0.3.
+- [Changelog](https://github.com/rollup/rollup-plugin-node-resolve/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/rollup/rollup-plugin-node-resolve/compare/v3.0.2...v3.0.3)",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "37f3364e9dc1882055499617b92829aedc729cf9",
+    "date": "Wed Feb 14 19:12:12 2018 +0000",
+    "message": "Bump mocha from 5.0.0 to 5.0.1
+
+Bumps [mocha](https://github.com/mochajs/mocha) from 5.0.0 to 5.0.1.
+- [Release notes](https://github.com/mochajs/mocha/releases/tag/v5.0.1)
+- [Changelog](https://github.com/mochajs/mocha/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/mochajs/mocha/compare/v5.0.0...v5.0.1)",
+  },
+  Object {
+    "author": "dependabot[bot] <support@dependabot.com>",
+    "commit": "435539b0e2819cf8844ab4eed5314f047f8340ca",
+    "date": "Tue Feb 13 19:12:23 2018 +0000",
+    "message": "Bump eslint-plugin-flowtype from 2.43.0 to 2.44.0
+
+Bumps [eslint-plugin-flowtype](https://github.com/gajus/eslint-plugin-flowtype) from 2.43.0 to 2.44.0.
+- [Release notes](https://github.com/gajus/eslint-plugin-flowtype/releases/tag/v2.44.0)
+- [Commits](https://github.com/gajus/eslint-plugin-flowtype/compare/v2.43.0...v2.44.0)",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "0cb772fa0899a3b1d7b0008538b1bc47497a15f7",
+    "date": "Tue Feb 13 09:54:37 2018 +1100",
+    "message": "1.1.0",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "35d3a221ba641c44ac114838619505f766c9d589",
+    "date": "Tue Feb 13 09:43:58 2018 +1100",
+    "message": "Refactor overload function",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "c2aff8ee6567f1ce1b16aa2e13d267ca98bba492",
+    "date": "Tue Feb 13 09:43:18 2018 +1100",
+    "message": "Replace functions with arrow functions in \`test/overload.js\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "12bbf289b46949999b9344479f474f9488cc033e",
+    "date": "Tue Feb 13 09:42:46 2018 +1100",
+    "message": "Migrate \`benchmark.js\` to ES6 syntax",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "e426a5f5059c130c41c0a57069108829a81a7f52",
+    "date": "Tue Feb 13 09:41:50 2018 +1100",
+    "message": "Adds \`.npmignore\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "27d379d088b8afed6c31815621f8e65936977b75",
+    "date": "Tue Feb 13 09:02:50 2018 +1100",
+    "message": "Make version badge link to npm website",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "62103976ba53408bc63dfd325bd949999f251015",
+    "date": "Tue Feb 13 09:00:34 2018 +1100",
+    "message": "Fix version badge",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "cc5ceb98cc311223017aa563d970990ca191380e",
+    "date": "Tue Feb 13 08:58:53 2018 +1100",
+    "message": "Migrate badges to shields.io",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "2e4077540e4fceceb3946973e27189ff0f7642e8",
+    "date": "Tue Feb 13 08:56:54 2018 +1100",
+    "message": "Switch benchmark to \`build/index.js\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "7b6529e29572f222a5c4a2c16aa3d0a594232a88",
+    "date": "Tue Feb 13 07:30:02 2018 +1100",
+    "message": "1.0.0",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "75a2e7b7487c71b91210892d418d9ac574b30e9b",
+    "date": "Mon Feb 12 22:46:40 2018 +1100",
+    "message": "Remove \`rollup-plugin-flow\` from repo",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "483e22128476b1edd60b5dd2c46f0d8968ca8903",
+    "date": "Mon Feb 12 22:43:34 2018 +1100",
+    "message": "Adds \`yarn test\` to Travis config",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "75495e073c4e07c4e9af044816bc36491210b9af",
+    "date": "Mon Feb 12 22:42:00 2018 +1100",
+    "message": "Fix issue with tests and flow",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "b57aba4b270d7c85a8c1cefb16f1d91626fefd30",
+    "date": "Mon Feb 12 22:31:58 2018 +1100",
+    "message": "Add scripts to \`package.json\`, add steps to \`.travis.yml\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "d2a4b80197efd94883f206528f48c728ff2efaf1",
+    "date": "Mon Feb 12 22:26:16 2018 +1100",
+    "message": "Add flow, rename \`getType.js\` to \`get-type.js\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "02624d556fc8675838abaaff0ce18bd734649df4",
+    "date": "Mon Feb 12 22:11:49 2018 +1100",
+    "message": "Remove redundant 'use strict' in \`src\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "c2c00b22cf55c7ab77301ffab77acf4833070f21",
+    "date": "Mon Feb 12 22:09:39 2018 +1100",
+    "message": "Apply \`npm run format\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "a4dc90f5b3e014927ee905c007cb2f75b2e66c85",
+    "date": "Mon Feb 12 22:09:25 2018 +1100",
+    "message": "Fix \`.eslintignore\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "e4814390cb7b9df45e2e6d21527b6a019e214fe6",
+    "date": "Mon Feb 12 22:03:23 2018 +1100",
+    "message": "Replace \`dist\` with \`build\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "18fa4a931bbe2633426746feb00371db44225051",
+    "date": "Mon Feb 12 22:01:40 2018 +1100",
+    "message": "Fix version in \`package.json\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "95427d75f5b01da39ab0480f1f9b82078e5b6de9",
+    "date": "Mon Feb 12 22:00:43 2018 +1100",
+    "message": "Change JSDoc for \`getType.js\` and \`overload.js\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "e0be6d7373e911206f26326a4911582f4ad71dae",
+    "date": "Mon Feb 12 21:59:15 2018 +1100",
+    "message": "Remove directory \`lib\` in src",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "b2e0141a1fe4f9a01d95ce59dd76ec1ab13aa106",
+    "date": "Mon Feb 12 21:55:44 2018 +1100",
+    "message": "Change license to MIT",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "2cbded0e713596774b244fb81c9de44a6657d3bb",
+    "date": "Mon Feb 12 21:53:47 2018 +1100",
+    "message": "Specify node engines in \`package.json\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "8c983468bc7369c4d456313cf17b33734e253e17",
+    "date": "Mon Feb 12 20:38:28 2018 +1100",
+    "message": "Drop support of Node.js v0.10 and v0.12",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "db25e30b64cf5e355b645048b5596413e11eafd6",
+    "date": "Mon Feb 12 20:35:17 2018 +1100",
+    "message": "Removes \`.jshintrc\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "d33ed66becc7238ee32d2ba427171aa5448e288f",
+    "date": "Mon Feb 12 20:34:21 2018 +1100",
+    "message": "Add prettier, eslint, update examples in README.md",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "0a4b458f412ba9bcb2636516d5b20f81a54b2d56",
+    "date": "Mon Feb 12 20:04:38 2018 +1100",
+    "message": "Add rollup, add babel, migrate to ES6",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "0bdcbb50e18a7a1dce64fa81b967b9f26ccf361b",
+    "date": "Mon Feb 12 18:10:27 2018 +1100",
+    "message": "Add \`yarn.lock\`",
+  },
+  Object {
+    "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",
+    "commit": "55a50125ea131e589a5d4a98079fe15027f1de27",
+    "date": "Mon Feb 12 18:09:08 2018 +1100",
+    "message": "Fix markdown in README.md",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "7fc567030dd5f7919ecf850bb8864ddec0e603e0",
+    "date": "Wed Jul 15 18:30:09 2015 +0300",
+    "message": "getType() fix for null and undefined",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "fac68af891fd17ed77aae44c8e8800a9682af4fd",
+    "date": "Wed Jul 15 18:28:16 2015 +0300",
+    "message": "dist/superoverload updated",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "0a08bc0cddfef2d1a8995ad75999a8209eca48b4",
+    "date": "Fri Jul 25 16:36:22 2014 +0400",
+    "message": "Package version incremented",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "9091d5c6d819b5116f7b344107f643571365df87",
+    "date": "Fri Jul 25 16:34:55 2014 +0400",
+    "message": "Fallback function arguments hotfix",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "2908f9d3c4ac032b50825d74549c7826a79f877a",
+    "date": "Wed Jul 23 16:38:20 2014 +0400",
+    "message": "package.json changed",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "1b0bf1b114563d60bdf889593f1c96996d326e36",
+    "date": "Wed Jul 23 16:34:02 2014 +0400",
+    "message": "Dist updated",
+  },
+  Object {
+    "author": "Aleksey <verkholantsev@users.noreply.github.com>",
+    "commit": "24b3a1a800ded82c80430c337bfa4b6c52e765be",
+    "date": "Wed Jul 23 16:32:14 2014 +0400",
+    "merge": Array [
+      "9a68db8",
+      "8b1a632",
+    ],
+    "message": "Merge pull request #6 from verkholantsev/if_implementation
+
+If implementation",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "8b1a6326d3ef0140c399406758421c9c8cdadf61",
+    "date": "Wed Jul 23 15:24:18 2014 +0400",
+    "message": "Comment removed",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "c73bc26490b373cdeec14db6c7c22ce180752f17",
+    "date": "Wed Jul 23 12:58:53 2014 +0400",
+    "message": "Some more refactoring",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "25bdb9d2f6ba036a088ba339a6c56e3bb2627fcb",
+    "date": "Wed Jul 23 12:54:15 2014 +0400",
+    "message": "If implementation refactoring",
+  },
+  Object {
+    "author": "Egor <escaton@yandex-team.ru>",
+    "commit": "30558385de16ce25ab7aa032ff722567dac10402",
+    "date": "Wed Jul 23 03:58:24 2014 +0600",
+    "message": "fix calling default func",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "9a68db82803526f4f9a10a62a4e0a79437a0dfd9",
+    "date": "Tue Jul 22 18:26:51 2014 +0400",
+    "message": "Package version badge added",
+  },
+  Object {
+    "author": "Egor <escaton@yandex-team.ru>",
+    "commit": "6eeb2f7cf59baf54fd8ff46ea03872988b3704b7",
+    "date": "Tue Jul 22 18:40:41 2014 +0600",
+    "message": "perfomance improvements",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "26f7252c517ccccd464a8742d0f58abfe18c165b",
+    "date": "Mon Jul 21 15:27:22 2014 +0400",
+    "message": "Argments renamed to parameters",
+  },
+  Object {
+    "author": "Aleksey <verkholantsev@users.noreply.github.com>",
+    "commit": "6139d1181d6c5c99366ad6cb33ebadb9593ec922",
+    "date": "Sun Jul 20 17:09:29 2014 +0400",
+    "merge": Array [
+      "4aff174",
+      "1c1a26f",
+    ],
+    "message": "Merge pull request #3 from verkholantsev/more_tests
+
+More tests",
+  },
+  Object {
+    "author": "verkholantsev <poshli.pismo@gmail.com>",
+    "commit": "1c1a26fdd81b342ee3e9e8ac21189a93a580e0f2",
+    "date": "Sun Jul 20 17:11:11 2014 +0400",
+    "message": "Test for complicated signature",
+  },
+  Object {
+    "author": "verkholantsev <poshli.pismo@gmail.com>",
+    "commit": "4139b3114df591b6153f780c964b208b3103d843",
+    "date": "Sun Jul 20 17:10:42 2014 +0400",
+    "message": "getType() test for function",
+  },
+  Object {
+    "author": "Aleksey <verkholantsev@users.noreply.github.com>",
+    "commit": "4aff174512e732be776ff72acdfdbec9fcac9f00",
+    "date": "Sun Jul 20 16:58:13 2014 +0400",
+    "merge": Array [
+      "71deb47",
+      "49191d5",
+    ],
+    "message": "Merge pull request #2 from verkholantsev/english_translations_for_jsdocs_and_tests
+
+English translations for jsdoc and tests",
+  },
+  Object {
+    "author": "verkholantsev <poshli.pismo@gmail.com>",
+    "commit": "49191d5949a7242c66925d8dc74c17d0b7ab6f57",
+    "date": "Sun Jul 20 16:57:49 2014 +0400",
+    "message": "English translations for jsdoc and tests",
+  },
+  Object {
+    "author": "verkholantsev <poshli.pismo@gmail.com>",
+    "commit": "71deb478e3961b98881d1f5a0cd7ca169c767bf3",
+    "date": "Sun Jul 20 16:29:08 2014 +0400",
+    "message": "Travis badge added",
+  },
+  Object {
+    "author": "verkholantsev <poshli.pismo@gmail.com>",
+    "commit": "36be97254e225dc3e8c09b86906a4c18ebdaa58d",
+    "date": "Sun Jul 20 16:24:26 2014 +0400",
+    "message": "Travis config added",
+  },
+  Object {
+    "author": "verkholantsev <poshli.pismo@gmail.com>",
+    "commit": "b2a1547e0b17c5e7c42a9366ad6651f4dfb998a9",
+    "date": "Sun Jul 20 16:15:49 2014 +0400",
+    "message": "Some perfomance improvements",
+  },
+  Object {
+    "author": "verkholantsev <poshli.pismo@gmail.com>",
+    "commit": "dd0630086f51f878a3f5d8f4387f27280d1ee984",
+    "date": "Sun Jul 20 15:04:17 2014 +0400",
+    "message": "Overload implementation with hash",
+  },
+  Object {
+    "author": "verkholantsev <poshli.pismo@gmail.com>",
+    "commit": "108d74ced260fc06372984fd294fa560971d304b",
+    "date": "Sat Jul 19 10:09:29 2014 +0400",
+    "message": "Bechmark moved to separate directory",
+  },
+  Object {
+    "author": "verkholantsev <poshli.pismo@gmail.com>",
+    "commit": "a2e26dc40d623c7bc7a2575f2687ddf7f28b6a8b",
+    "date": "Sat Jul 19 09:54:09 2014 +0400",
+    "message": "Some benchmarks added",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "b22c70a6e2a2f034676c31d01380c1f7cad23ab7",
+    "date": "Mon Jul 7 15:25:28 2014 +0400",
+    "message": "Removed dependency from lodash",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "b1bfe20f93ee920f46a577c5fa5d80ae9c7e5dd0",
+    "date": "Mon Jul 7 12:13:43 2014 +0400",
+    "message": "README.md added",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "6dfcc520e4282c156ce41eab596023908767c61c",
+    "date": "Thu Jul 3 17:40:18 2014 +0400",
+    "message": "Renamed to superoverload",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "3a424923b198a426c629c568905d4a8db13920dc",
+    "date": "Thu Jul 3 17:13:46 2014 +0400",
+    "message": "Git repo added to package.json",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "ad2f524e5552e454b0145ddae8a49940a37a23f2",
+    "date": "Thu Jul 3 16:50:15 2014 +0400",
+    "message": "Package name changed",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "9469433673b1c72829d413f8607800188a21acbd",
+    "date": "Thu Jul 3 16:13:58 2014 +0400",
+    "message": "Browser dist added",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "67fc49fc5e2aa063227205b22e76c424d0d1cd97",
+    "date": "Thu Jul 3 15:45:07 2014 +0400",
+    "message": "index.js added",
+  },
+  Object {
+    "author": "Aleksey Verkholantsev <alex-vee@yandex-team.ru>",
+    "commit": "c37ed208c1d0ba5c0c486c368da2b473028bcb87",
+    "date": "Thu Jul 3 15:36:19 2014 +0400",
+    "message": "Initial commit",
+  },
+]
+`;
