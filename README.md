@@ -1,5 +1,7 @@
 # `better-git`
 
+`better-git` is a Node.js API for `git`.
+
 ## Usage
 
 ### `git.log`
