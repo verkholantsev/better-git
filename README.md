@@ -15,3 +15,9 @@ const commits = await git.log({ maxCount: 10 });
 ```js
 const commit = await git.show();
 ```
+
+### `git.getRemotes`
+
+```js
+const remotes = await git.getRemotes();
+```

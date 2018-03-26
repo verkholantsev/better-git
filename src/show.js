@@ -1,7 +1,13 @@
+// @flow
+
 import parseCommits from './parse-commits';
 import mapOpts from './map-opts';
 
-export default async function show(git, opts = {}) {
+import type { Git } from './git-factory';
+import type { Opts } from './map-opts';
+import type { Commit } from './parse-commits';
+
+export default async function show(git: Git, opts: Opts = {}): Promise<Commit> {
     const args = ['show', ...mapOpts(opts)];
     const out = await git(args);
     const commits = parseCommits(out);

@@ -1,8 +1,10 @@
+// @flow
+
 import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
 
-import show from '../src/git-show';
+import show from '../src/show';
 
 const readFile = promisify(fs.readFile);
 

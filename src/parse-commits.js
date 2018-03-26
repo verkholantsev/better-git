@@ -1,10 +1,21 @@
+// @flow
+
 const ParseState = {
     HEADER: 0,
     MESSAGE: 1,
     DIFF: 2,
 };
 
-export default function parseCommits(inputText) {
+export type Commit = {
+    author?: string,
+    commit?: string,
+    date?: string,
+    diff?: string,
+    merge?: Array<string>,
+    message?: string,
+};
+
+export default function parseCommits(inputText: string): Array<Commit> {
     const lines = inputText.split('\n');
 
     const commits = [];
