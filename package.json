@@ -4,6 +4,10 @@
     "main": "index.js",
     "author": "Aleksei Verkholantcev <poshli.pismo@gmail.com>",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/verkholantsev/better-git.git"
+    },
     "dependencies": {
         "debug": "^3.1.0",
         "flow-bin": "^0.68.0",
