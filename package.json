@@ -38,6 +38,6 @@
         "lint": "eslint ./**/*.js",
         "flow": "flow .",
         "pre-commit": "yarn run lint && yarn run flow",
-        "publish:coverage": "jest --coverage && cat coverage/lcov.info | coveralls"
+        "publish:coverage": "cat coverage/lcov.info | coveralls"
     }
 }
