@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { promisify } from 'util';
+import promisify from 'util.promisify';
 
 import show from '../src/show';
 

@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import os from 'os';
 import rimraf from 'rimraf';
-import { promisify } from 'util';
+import promisify from 'util.promisify';
 
 const mkdir = promisify(fs.mkdir);
 const rmdir = promisify(rimraf);
