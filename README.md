@@ -1,5 +1,5 @@
-[![Build Status](https://img.shields.io/travis/verkholantsev/superoverload.svg)](https://travis-ci.org/verkholantsev/superoverload)
-[![Coverage report](https://img.shields.io/coveralls/github/verkholantsev/superoverload.svg)](https://coveralls.io/github/verkholantsev/superoverload)
+[![Build Status](https://img.shields.io/travis/verkholantsev/better-git.svg)](https://travis-ci.org/verkholantsev/better-git)
+[![Coverage report](https://img.shields.io/coveralls/github/verkholantsev/better-git.svg)](https://coveralls.io/github/verkholantsev/better-git)
 
 # `better-git`
 
