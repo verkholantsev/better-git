@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GitError should contain message property 1`] = `
+"Git error (exit code 1337)
+stderr: stderr
+stdout: stdout"
+`;
