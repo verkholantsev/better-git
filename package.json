@@ -39,5 +39,10 @@
         "flow": "flow .",
         "pre-commit": "yarn run lint && yarn run flow",
         "publish:coverage": "cat coverage/lcov.info | coveralls"
+    },
+    "jest": {
+        "setupFiles": [
+            "<rootDir>/node_modules/babel-polyfill"
+        ]
     }
 }
