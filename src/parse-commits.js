@@ -8,6 +8,7 @@ const ParseState = {
 
 export type Commit = {
     author?: string,
+    changedFiles?: Array<ChangedFile>,
     commit?: string,
     date?: string,
     diff?: string,
@@ -22,6 +23,7 @@ export default function parseCommits(inputText: string): Array<Commit> {
     let state = ParseState.HEADER;
     let commitMessageBuffer = [];
     let diffBuffer = [];
+    let changedFilesBuffer = [];
 
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
@@ -32,6 +34,9 @@ export default function parseCommits(inputText: string): Array<Commit> {
             }
             if (diffBuffer.length > 0) {
                 assignToLastCommit(commits, { diff: diffBuffer.join('\n') });
+            }
+            if (changedFilesBuffer.length > 0) {
+                assignToLastCommit(commits, { changedFiles: changedFilesBuffer });
             }
 
             const commit = line.replace(/^commit\s*/, '');
@@ -51,8 +56,11 @@ export default function parseCommits(inputText: string): Array<Commit> {
             state = getNextParseStateOnEmptyLine(state);
         } else if (line.startsWith('    ')) {
             commitMessageBuffer.push(line.replace(/^\s\s\s\s/, ''));
-        } else if (line.startsWith('diff') || state === ParseState.DIFF) {
+        } else if (line.startsWith('diff')) {
             state = ParseState.DIFF;
+            diffBuffer.push(line);
+            changedFilesBuffer.push(parseChangedFile(line));
+        } else if (state === ParseState.DIFF) {
             diffBuffer.push(line);
         } else {
             throw new Error(`Unexpected line: ${line}`);
@@ -65,8 +73,32 @@ export default function parseCommits(inputText: string): Array<Commit> {
     if (diffBuffer.length > 0) {
         assignToLastCommit(commits, { diff: diffBuffer.join('\n') });
     }
+    if (changedFilesBuffer.length > 0) {
+        assignToLastCommit(commits, { changedFiles: changedFilesBuffer });
+    }
 
     return commits;
+}
+
+const CHANGED_FILES_REGEX = /^diff --git a\/(.+) b\/(.+)$/i;
+
+type ChangedFile = {
+    source: string,
+    destination: string,
+};
+
+/**
+ * Parses a line `diff --git a/package.json b/package.json` to two files (source and destination)
+ */
+function parseChangedFile(line: string): ChangedFile {
+    const groups = CHANGED_FILES_REGEX.exec(line);
+
+    if (!groups) {
+        throw new Error(`Unexpected line '${line}' in parseChangedFile()`);
+    }
+
+    const [, source, destination] = groups;
+    return { source, destination };
 }
 
 function getNextParseStateOnEmptyLine(state) {

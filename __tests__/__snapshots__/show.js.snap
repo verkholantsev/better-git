@@ -3,6 +3,16 @@
 exports[`git.show() should work correctly 1`] = `
 Object {
   "author": "dependabot[bot] <support@dependabot.com>",
+  "changedFiles": Array [
+    Object {
+      "destination": "package.json",
+      "source": "package.json",
+    },
+    Object {
+      "destination": "yarn.lock",
+      "source": "yarn.lock",
+    },
+  ],
   "commit": "88e99b0809d9b73021385988c316173c9f10e8f0",
   "date": "Thu Mar 15 19:11:29 2018 +0000",
   "diff": "diff --git a/package.json b/package.json
