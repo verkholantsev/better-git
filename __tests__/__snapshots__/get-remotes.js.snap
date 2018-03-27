@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`git.getRemotes() should work correctly 1`] = `
+Array [
+  Object {
+    "name": "origin",
+    "refs": Object {
+      "fetch": "git@github.com:verkholantsev/yarn.git",
+      "push": "git@github.com:verkholantsev/yarn.git",
+    },
+  },
+  Object {
+    "name": "upstream",
+    "refs": Object {
+      "fetch": "git@github.com:yarnpkg/yarn.git",
+      "push": "git@github.com:yarnpkg/yarn.git",
+    },
+  },
+]
+`;

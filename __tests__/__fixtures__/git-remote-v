@@ -1,0 +1,4 @@
+origin	git@github.com:verkholantsev/yarn.git (fetch)
+origin	git@github.com:verkholantsev/yarn.git (push)
+upstream	git@github.com:yarnpkg/yarn.git (fetch)
+upstream	git@github.com:yarnpkg/yarn.git (push)

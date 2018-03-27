@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`git-log should work correctly 1`] = `
+exports[`git.log() should work correctly 1`] = `
 Array [
   Object {
     "author": "Aleksei Verkholantcev <averkholantcev@atlassian.com>",

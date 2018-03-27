@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`git-show should work correctly 1`] = `
+exports[`git.show() should work correctly 1`] = `
 Object {
   "author": "dependabot[bot] <support@dependabot.com>",
   "commit": "88e99b0809d9b73021385988c316173c9f10e8f0",
