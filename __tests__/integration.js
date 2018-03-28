@@ -36,32 +36,70 @@ describe('integration test', () => {
             expect(await git.getRemotes()).toHaveLength(0);
         });
 
-        describe('after first commit', () => {
+        describe('after creating a file', () => {
             beforeAll(async () => {
                 const filename = path.join(repoDir, 'some-file');
                 await writeFile(filename, 'Some content');
-                await git.add({ all: true });
-                await git.commit({ message: 'Commit', allowEmpty: true });
             });
 
-            it('git.log() should return one commit', async () => {
-                const commits = await git.log();
-                expect(commits).toHaveLength(1);
+            it('git.status() should return this file as `new`', async () => {
+                const status = await git.status();
+
+                expect(status).toHaveLength(1);
+
+                expect(status[0]).toEqual(
+                    expect.objectContaining({
+                        isStaged: false,
+                        name: 'some-file',
+                        status: 'new',
+                    })
+                );
             });
 
-            it('git.log() should return one commit with `Commit` as a message', async () => {
-                const [commit] = await git.log();
-                expect(commit).toHaveProperty('message', 'Commit');
-            });
+            describe('after adding file to staging area', () => {
+                beforeAll(async () => {
+                    await git.add({ all: true });
+                });
 
-            it('git.show() should return commit with `Commit` as a message', async () => {
-                const commit = await git.show();
-                expect(commit).toHaveProperty('message', 'Commit');
-            });
+                it('git.status() should return this file as `added`', async () => {
+                    const status = await git.status();
 
-            it('git.show() should return commit with diff containing `+Some content`', async () => {
-                const commit = await git.show();
-                expect(commit).toHaveProperty('diff', expect.stringContaining('+Some content'));
+                    expect(status).toHaveLength(1);
+
+                    expect(status[0]).toEqual(
+                        expect.objectContaining({
+                            isStaged: true,
+                            name: 'some-file',
+                            status: 'added',
+                        })
+                    );
+                });
+
+                describe('after first commit', () => {
+                    beforeAll(async () => {
+                        await git.commit({ message: 'Commit', allowEmpty: true });
+                    });
+
+                    it('git.log() should return one commit', async () => {
+                        const commits = await git.log();
+                        expect(commits).toHaveLength(1);
+                    });
+
+                    it('git.log() should return one commit with `Commit` as a message', async () => {
+                        const [commit] = await git.log();
+                        expect(commit).toHaveProperty('message', 'Commit');
+                    });
+
+                    it('git.show() should return commit with `Commit` as a message', async () => {
+                        const commit = await git.show();
+                        expect(commit).toHaveProperty('message', 'Commit');
+                    });
+
+                    it('git.show() should return commit with diff containing `+Some content`', async () => {
+                        const commit = await git.show();
+                        expect(commit).toHaveProperty('diff', expect.stringContaining('+Some content'));
+                    });
+                });
             });
         });
     });

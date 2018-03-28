@@ -1,0 +1,6 @@
+R  __tests__/integration.js -> __tests__/integration.1.js
+ D flow-typed/npm/flow-copy-source_vx.x.x.js
+ M src/parse-commits.js
+A  src/status.js
+?? __tests__/__fixtures__/status-porcelain
+?? __tests__/status.js

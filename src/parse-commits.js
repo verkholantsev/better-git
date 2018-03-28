@@ -16,6 +16,9 @@ export type Commit = {
     message?: string,
 };
 
+/**
+ * Parses output for both `git show` and `git log`.
+ */
 export default function parseCommits(inputText: string): Array<Commit> {
     const lines = inputText.split('\n');
 

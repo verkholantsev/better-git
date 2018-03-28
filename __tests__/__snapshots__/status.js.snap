@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`git.status() should work correctly 1`] = `
+Array [
+  Object {
+    "destination": "__tests__/integration.1.js",
+    "isStaged": true,
+    "source": " __tests__/integration.js",
+    "status": "renamed",
+  },
+  Object {
+    "isStaged": false,
+    "name": "flow-typed/npm/flow-copy-source_vx.x.x.js",
+    "status": "deleted",
+  },
+  Object {
+    "isStaged": false,
+    "name": "src/parse-commits.js",
+    "status": "modified",
+  },
+  Object {
+    "isStaged": true,
+    "name": "src/status.js",
+    "status": "added",
+  },
+  Object {
+    "isStaged": false,
+    "name": "__tests__/__fixtures__/status-porcelain",
+    "status": "new",
+  },
+  Object {
+    "isStaged": false,
+    "name": "__tests__/status.js",
+    "status": "new",
+  },
+]
+`;
