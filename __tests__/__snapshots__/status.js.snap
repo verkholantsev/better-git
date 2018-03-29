@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`git.status() should work correctly 1`] = `
+exports[`git.status() should return correct output 1`] = `
 Array [
   Object {
     "destination": "__tests__/integration.1.js",
