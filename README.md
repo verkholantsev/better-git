@@ -16,10 +16,13 @@ import betterGit from 'better-git';
 // CommonJS
 const betterGit = require('better-git');
 
+// Create `git` object
 const git = better({ cwd: '/absolute/path/to/git/repo' });
 ```
 
 ### `git.add`
+
+Adds files to staged area.
 
 ```js
 await git.add({ all: true });
@@ -27,11 +30,15 @@ await git.add({ all: true });
 
 ### `git.commit`
 
+Creates commit with specified message.
+
 ```js
 await git.commit({ message: 'Create new commit' });
 ```
 
 ### `git.getRemotes`
+
+Returns array of remote repos.
 
 ```js
 const remotes = await git.getRemotes();
@@ -39,11 +46,15 @@ const remotes = await git.getRemotes();
 
 ### `git.init`
 
+Inits git repo in cwd directory (specified during initialisation).
+
 ```js
 await git.init();
 ```
 
 ### `git.log`
+
+Returns array of commits.
 
 ```js
 const commits = await git.log({ maxCount: 10 });
@@ -51,11 +62,15 @@ const commits = await git.log({ maxCount: 10 });
 
 ### `git.show`
 
+Returns detailed commit information.
+
 ```js
 const commit = await git.show();
 ```
 
 ### `git.status`
+
+Returns array of changed files in current repo.
 
 ```js
 const status = await git.status();
