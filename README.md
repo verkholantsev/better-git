@@ -17,7 +17,7 @@ import betterGit from 'better-git';
 const betterGit = require('better-git');
 
 // Create `git` object
-const git = better({ cwd: '/absolute/path/to/git/repo' });
+const git = betterGit({ cwd: '/absolute/path/to/git/repo' });
 ```
 
 ### `git.add`
