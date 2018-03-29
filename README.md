@@ -1,9 +1,13 @@
 [![Build Status](https://img.shields.io/travis/verkholantsev/better-git.svg)](https://travis-ci.org/verkholantsev/better-git)
 [![Coverage report](https://img.shields.io/coveralls/github/verkholantsev/better-git.svg)](https://coveralls.io/github/verkholantsev/better-git)
 
-# `better-git`
+# 🌱 `better-git`
 
-`better-git` is a Node.js API for `git`.
+`better-git` is a Node.js API for `git` that:
+
+1. Has Promise interface (works with async/await)
+2. Has [Flow](https://flow.org/) typings
+3. Will parse `git` output for you
 
 ## Installation
 
