@@ -5,9 +5,17 @@
 
 `better-git` is a Node.js API for `git`.
 
-## Usage
+## Installation
 
-### Import and initialisation
+```sh
+# using npm
+npm install better-git --save
+
+# using yarn
+yarn add better-git
+```
+
+## Import and initialisation
 
 ```js
 // ES6 modules
@@ -19,6 +27,8 @@ const betterGit = require('better-git');
 // Create `git` object
 const git = betterGit({ cwd: '/absolute/path/to/git/repo' });
 ```
+
+## Usage
 
 ### `git.add`
 
