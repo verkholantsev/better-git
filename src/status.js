@@ -1,9 +1,6 @@
 // @flow
 
-import mapOpts from './map-opts';
-
 import type { Git } from './git-factory';
-import type { Opts } from './map-opts';
 
 type Status = 'renamed' | 'deleted' | 'modified' | 'new' | 'added';
 
@@ -15,8 +12,8 @@ export type FileStatus = {
     status: Status,
 };
 
-export default async function status(git: Git, opts: Opts = {}): Promise<Array<FileStatus>> {
-    const args = ['status', '--porcelain', ...mapOpts(opts)];
+export default async function status(git: Git): Promise<Array<FileStatus>> {
+    const args = ['status', '--porcelain'];
     const out = await git(args);
     return parseStatus(out);
 }

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`git.getRemotes() should work correctly 1`] = `
+exports[`git.getRemotes() should produce correct output 1`] = `
 Array [
   Object {
     "name": "origin",
