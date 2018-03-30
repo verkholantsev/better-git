@@ -7,8 +7,8 @@ node_js:
 script:
   - yarn lint
   - yarn flow
-  - yarn test --coverage
   - yarn build
+  - yarn test --coverage
 
 after_script:
     - yarn run publish:coverage
