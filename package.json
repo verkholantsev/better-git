@@ -50,7 +50,6 @@
         "node": ">=6"
     },
     "jest": {
-        "setupFiles": ["<rootDir>/node_modules/babel-polyfill"],
         "coveragePathIgnorePatterns": ["/node_modules/", "<rootDir>/dist/"]
     }
 }
