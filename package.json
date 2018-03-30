@@ -1,7 +1,7 @@
 {
     "name": "better-git",
     "version": "0.1.0",
-    "main": "index.js",
+    "main": "dist/index.js",
     "author": "Aleksei Verkholantcev <poshli.pismo@gmail.com>",
     "license": "MIT",
     "repository": {
@@ -21,6 +21,7 @@
         "babel": "^6.23.0",
         "babel-core": "^6.26.0",
         "babel-eslint": "^8.2.2",
+        "babel-plugin-external-helpers": "^6.22.0",
         "babel-polyfill": "^6.26.0",
         "babel-preset-env": "^1.6.1",
         "babel-preset-flow": "^6.23.0",
@@ -30,15 +31,19 @@
         "eslint-plugin-prettier": "^2.6.0",
         "jest": "^22.4.3",
         "prettier": "^1.11.1",
-        "rimraf": "^2.6.2"
+        "rimraf": "^2.6.2",
+        "rollup": "^0.57.1",
+        "rollup-plugin-babel": "^3.0.3",
+        "rollup-plugin-commonjs": "^9.1.0"
     },
     "scripts": {
-        "test": "jest",
+        "build": "rollup -c",
+        "flow": "flow .",
         "format": "eslint --fix . && prettier --write **/*.{md,json,js}",
         "lint": "eslint ./**/*.js",
-        "flow": "flow .",
         "pre-commit": "yarn run lint && yarn run flow",
-        "publish:coverage": "cat coverage/lcov.info | coveralls"
+        "publish:coverage": "cat coverage/lcov.info | coveralls",
+        "test": "jest"
     },
     "jest": {
         "setupFiles": [
