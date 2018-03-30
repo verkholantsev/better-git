@@ -45,9 +45,10 @@
         "publish:coverage": "cat coverage/lcov.info | coveralls",
         "test": "jest"
     },
+    "engines": {
+        "node": ">=6"
+    },
     "jest": {
-        "setupFiles": [
-            "<rootDir>/node_modules/babel-polyfill"
-        ]
+        "setupFiles": ["<rootDir>/node_modules/babel-polyfill"]
     }
 }

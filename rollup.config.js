@@ -13,7 +13,7 @@ module.exports = {
     },
     plugins: [
         babel({
-            presets: [['env', { modules: false }], 'flow'],
+            presets: [['env', { modules: false, targets: { node: '6' } }], 'flow'],
             exclude: 'node_modules/**',
             babelrc: false,
             plugins: ['external-helpers'],

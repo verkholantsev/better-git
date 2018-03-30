@@ -5,9 +5,9 @@
 
 `better-git` is a Node.js API for `git` that:
 
-1. Has Promise interface (works with async/await)
-2. Has [Flow](https://flow.org/) typings
-3. Will parse `git` output for you
+1.  Has Promise interface (works with async/await)
+2.  Has [Flow](https://flow.org/) typings
+3.  Will parse `git` output for you
 
 ## Installation
 
@@ -92,8 +92,8 @@ const status = await git.status();
 
 ## Similar packages
 
-1. `simple-git` https://github.com/steveukx/git-js
-2. `git` https://github.com/christkv/node-git
+1.  `simple-git` https://github.com/steveukx/git-js
+2.  `git` https://github.com/christkv/node-git
 
 ## Author
 
