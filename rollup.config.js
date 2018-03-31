@@ -16,7 +16,7 @@ module.exports = {
             presets: [['env', { modules: false, targets: { node: '6' } }], 'flow'],
             exclude: 'node_modules/**',
             babelrc: false,
-            plugins: ['transform-es2017-object-entries', 'external-helpers'],
+            plugins: ['external-helpers'],
         }),
         commonjs(),
     ],

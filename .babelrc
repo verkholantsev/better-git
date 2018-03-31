@@ -3,7 +3,5 @@
         "env",
         "flow"
     ],
-    "plugins": [
-        "transform-es2017-object-entries"
-    ]
+    "plugins": []
 }

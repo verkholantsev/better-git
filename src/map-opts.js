@@ -10,8 +10,9 @@ export type Opts = {
  * Converts object with camelCased keys to parameters to pass to git
  */
 export default function mapOpts(opts: Opts): string {
-    return Object.entries(opts)
-        .reduce((acc, [key, value]) => {
+    return Object.keys(opts)
+        .reduce((acc, key) => {
+            let value = opts[key];
             let parameter;
 
             if (value === true) {
