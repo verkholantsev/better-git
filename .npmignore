@@ -15,5 +15,3 @@ dev-entry.js
 rollup.config.js
 yarn-error.log
 yarn.lock
-
-*.swp
