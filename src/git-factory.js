@@ -4,14 +4,14 @@ import spawn from 'spawndamnit';
 import GitError from './git-error';
 import debug from 'debug';
 
+const gitInputDebug = debug('better-git:input');
+const gitOutputDebug = debug('better-git:output');
+
 export type RepoOpts = {
     cwd?: string,
 };
 
-const gitInputDebug = debug('better-git:input');
-const gitOutputDebug = debug('better-git:output');
-
-type GitArgs = Array<string>;
+export type GitArgs = Array<string>;
 
 export type Git = (args: GitArgs) => Promise<string>;
 

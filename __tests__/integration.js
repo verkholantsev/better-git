@@ -10,6 +10,7 @@ const mkdir = promisify(fs.mkdir);
 const rmdir = promisify(rimraf);
 const writeFile = promisify(fs.writeFile);
 
+// $FlowFixMe ignore this import
 import betterGit from '../';
 
 describe('integration test', () => {
