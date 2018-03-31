@@ -74,6 +74,14 @@ Returns array of commits.
 const commits = await git.log({ maxCount: 10 });
 ```
 
+### `git.raw`
+
+Executes raw git command and returns unparsed output.
+
+```js
+const output = await git.raw(['--help']);
+```
+
 ### `git.show`
 
 Returns detailed commit information.
