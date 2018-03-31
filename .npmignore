@@ -1,17 +1,3 @@
-__tests__/
-coverage/
-flow-typed/
-src/
+*
 
-.babelrc
-.eslintignore
-.eslintrc.js
-.flowconfig
-.gitignore
-.npmignore
-.prettierrc
-.travis.yml
-dev-entry.js
-rollup.config.js
-yarn-error.log
-yarn.lock
+!/dist/*
