@@ -19,7 +19,7 @@ export default async function show(git: Git, opts: Opts = {}): Promise<Commit> {
 
     if (commits.length > 1) {
         throw new Error('Output for `git show` contains more that one commit, it should contain only one');
-    } else if (commits === 0) {
+    } else if (commits.length === 0) {
         throw new Error('Output for `git show` does not contain commits, it should contain exact one');
     }
 
