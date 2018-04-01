@@ -14,7 +14,10 @@ export default class GitError extends Error {
     stderr: string;
 
     constructor({ code, stdout, stderr }: Opts) {
-        super(`Git error (exit code ${code})\nstderr: ${stderr || '<empty>'}\nstdout: ${stdout || '<empty>'}`);
+        const stdoutOrEmpty = stdout || '<empty>';
+        const stderrOrEmpty = stderr || '<empty>';
+
+        super(`Git error (exit code ${code})\nstderr: ${stderrOrEmpty}\nstdout: ${stdoutOrEmpty}`);
         this.code = code;
         this.stdout = stdout;
         this.stderr = stderr;
