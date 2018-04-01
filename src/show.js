@@ -1,13 +1,18 @@
 // @flow
 
-import parseCommits from './parse-commits';
+import checkSupportedOpts from './check-supported-opts';
 import mapOpts from './map-opts';
+import parseCommits from './parse-commits';
 
 import type { Git } from './git-factory';
 import type { Opts } from './map-opts';
 import type { Commit } from './parse-commits';
 
+const SUPPORTED_OPTS = [];
+
 export default async function show(git: Git, opts: Opts = {}): Promise<Commit> {
+    checkSupportedOpts('show', opts, SUPPORTED_OPTS);
+
     const args = ['show', ...mapOpts(opts)];
     const out = await git(args);
     const commits = parseCommits(out);
