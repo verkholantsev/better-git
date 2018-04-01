@@ -14,14 +14,14 @@ import status from './status';
 
 import type { Commit } from './parse-commits';
 import type { Opts } from './map-opts';
-import type { Remote } from './get-remotes';
+import type { Remotes } from './parse-remotes';
 import type { RepoOpts, GitArgs } from './git-factory';
 import type { FileStatus } from './status';
 
 type BetterGit = {|
     add: (opts?: Opts) => Promise<string>,
     commit: (opts?: Opts) => Promise<string>,
-    getRemotes: () => Promise<Array<Remote>>,
+    getRemotes: () => Promise<Remotes>,
     init: (opts?: Opts) => Promise<string>,
     raw: (args: GitArgs) => Promise<string>,
     log: (opts?: Opts) => Promise<Array<Commit>>,
