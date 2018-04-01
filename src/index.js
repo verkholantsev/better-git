@@ -16,7 +16,7 @@ import type { Commit } from './parse-commits';
 import type { Opts } from './map-opts';
 import type { Remotes } from './parse-remotes';
 import type { RepoOpts, GitArgs } from './git-factory';
-import type { FileStatus } from './status';
+import type { FileStatuses } from './parse-status';
 
 type BetterGit = {|
     add: (opts?: Opts) => Promise<string>,
@@ -26,7 +26,7 @@ type BetterGit = {|
     raw: (args: GitArgs) => Promise<string>,
     log: (opts?: Opts) => Promise<Array<Commit>>,
     show: (opts?: Opts) => Promise<Commit>,
-    status: (opts?: Opts) => Promise<Array<FileStatus>>,
+    status: (opts?: Opts) => Promise<FileStatuses>,
 |};
 
 export default function betterGit(repoOpts?: RepoOpts): BetterGit {
