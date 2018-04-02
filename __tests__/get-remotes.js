@@ -25,4 +25,18 @@ describe('git.getRemotes()', () => {
 
         expect(git).toBeCalledWith(['remote', '-v']);
     });
+
+    describe('should throw an error', () => {
+        it('for unexpeced line in git output', async () => {
+            const git = async () => 'bla';
+            await expect(getRemotes(git)).rejects.toThrow('Unexpected line in remote output "bla"');
+        });
+
+        it('for duplicated line in git output', async () => {
+            const git = async () =>
+                'origin\tgit@github.com:yarnpkg/yarn.git (fetch)\norigin\tgit@github.com:yarnpkg/yarn.git (fetch)';
+
+            await expect(getRemotes(git)).rejects.toThrow('Ref type "fetch" for remote "origin" already exists');
+        });
+    });
 });
