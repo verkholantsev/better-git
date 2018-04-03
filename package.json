@@ -39,7 +39,7 @@
     "scripts": {
         "build": "rollup -c",
         "flow": "flow .",
-        "format": "eslint --fix . && prettier --write **/*.{md,json,js}",
+        "format": "eslint --fix . ; prettier --write **/*.{md,json,js}",
         "lint": "eslint ./**/*.js",
         "pre-commit": "yarn run lint && yarn run flow",
         "publish:coverage": "cat coverage/lcov.info | coveralls",

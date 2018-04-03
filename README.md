@@ -34,7 +34,7 @@ const git = betterGit({ cwd: '/absolute/path/to/git/repo' });
 
 ## Usage
 
-### `git.add`
+### `git.add(opts: { [string]: mixed })`
 
 Adds files to staged area.
 
@@ -42,7 +42,16 @@ Adds files to staged area.
 await git.add({ all: true });
 ```
 
-### `git.commit`
+### `git.clone(url: string, dirname: string)`
+
+Clones repo from `url` in `cwd` using `dirname` as a directory name for repo.
+
+```js
+const git = betterGit({ cwd: '/Users/user/tmp' });
+await git.clone('git@github.com:verkholantsev/better-git.git', 'better-git');
+```
+
+### `git.commit(opts: { [string]: mixed })`
 
 Creates commit with specified message.
 
@@ -50,7 +59,7 @@ Creates commit with specified message.
 await git.commit({ message: 'Create new commit' });
 ```
 
-### `git.getRemotes`
+### `git.getRemotes()`
 
 Returns array of remote repos.
 
@@ -58,7 +67,7 @@ Returns array of remote repos.
 const remotes = await git.getRemotes();
 ```
 
-### `git.init`
+### `git.init()`
 
 Inits git repo in cwd directory (specified during initialisation).
 
@@ -66,7 +75,7 @@ Inits git repo in cwd directory (specified during initialisation).
 await git.init();
 ```
 
-### `git.log`
+### `git.log(opts: { [string]: mixed })`
 
 Returns array of commits.
 
@@ -74,7 +83,7 @@ Returns array of commits.
 const commits = await git.log({ maxCount: 10 });
 ```
 
-### `git.raw`
+### `git.raw(args: Array<string>)`
 
 Executes raw git command and returns unparsed output.
 
@@ -82,7 +91,7 @@ Executes raw git command and returns unparsed output.
 const output = await git.raw(['--help']);
 ```
 
-### `git.show`
+### `git.show(opts: { [string]: mixed })`
 
 Returns detailed commit information.
 
@@ -90,7 +99,7 @@ Returns detailed commit information.
 const commit = await git.show();
 ```
 
-### `git.status`
+### `git.status()`
 
 Returns array of changed files in current repo.
 

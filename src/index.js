@@ -3,6 +3,7 @@
 import partial from 'lodash/partial';
 
 import add from './add';
+import clone from './clone';
 import commit from './commit';
 import getRemotes from './get-remotes';
 import gitFactory from './git-factory';
@@ -20,6 +21,7 @@ import type { FileStatuses } from './parse-status';
 
 type BetterGit = {|
     add: (opts?: Opts) => Promise<string>,
+    clone: (url: string, dirname: string) => Promise<string>,
     commit: (opts?: Opts) => Promise<string>,
     getRemotes: () => Promise<Remotes>,
     init: (opts?: Opts) => Promise<string>,
@@ -34,6 +36,7 @@ export default function betterGit(repoOpts?: RepoOpts): BetterGit {
 
     return {
         add: partial(add, git),
+        clone: partial(clone, git),
         commit: partial(commit, git),
         getRemotes: partial(getRemotes, git),
         init: partial(init, git),
