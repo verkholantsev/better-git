@@ -34,7 +34,7 @@ const git = betterGit({ cwd: '/absolute/path/to/git/repo' });
 
 ## Usage
 
-### `git.add(opts: { [string]: mixed })`
+### `git.add(opts: { [string]: mixed }): Promise<string>`
 
 Adds files to staged area.
 
@@ -42,7 +42,7 @@ Adds files to staged area.
 await git.add({ all: true });
 ```
 
-### `git.clone(url: string, dirname: string)`
+### `git.clone(url: string, dirname: string): Promise<string>`
 
 Clones repo from `url` in `cwd` using `dirname` as a directory name for repo.
 
@@ -51,7 +51,7 @@ const git = betterGit({ cwd: '/Users/user/tmp' });
 await git.clone('git@github.com:verkholantsev/better-git.git', 'better-git');
 ```
 
-### `git.commit(opts: { [string]: mixed })`
+### `git.commit(opts: { [string]: mixed }): Promise<string>`
 
 Creates commit with specified message.
 
@@ -59,15 +59,15 @@ Creates commit with specified message.
 await git.commit({ message: 'Create new commit' });
 ```
 
-### `git.getRemotes()`
+### `git.getRemotes(): Promise<Remotes>`
 
-Returns array of remote repos.
+Returns array of [remote repos](https://github.com/verkholantsev/better-git/blob/master/src/parse-remotes.js#L5).
 
 ```js
 const remotes = await git.getRemotes();
 ```
 
-### `git.init()`
+### `git.init(): Promise<string>`
 
 Inits git repo in cwd directory (specified during initialisation).
 
@@ -75,15 +75,15 @@ Inits git repo in cwd directory (specified during initialisation).
 await git.init();
 ```
 
-### `git.log(opts: { [string]: mixed })`
+### `git.log(opts: { [string]: mixed }): Promise<Array<Commit>>`
 
-Returns array of commits.
+Returns array of [commits](https://github.com/verkholantsev/better-git/blob/master/src/parse-commits.js#L9).
 
 ```js
 const commits = await git.log({ maxCount: 10 });
 ```
 
-### `git.raw(args: Array<string>)`
+### `git.raw(args: Array<string>): Promise<string>`
 
 Executes raw git command and returns unparsed output.
 
@@ -91,17 +91,18 @@ Executes raw git command and returns unparsed output.
 const output = await git.raw(['--help']);
 ```
 
-### `git.show(opts: { [string]: mixed })`
+### `git.show(opts: { [string]: mixed }): Promise<Commit>`
 
-Returns detailed commit information.
+Returns detailed [commit](https://github.com/verkholantsev/better-git/blob/master/src/parse-commits.js#L9) information.
 
 ```js
 const commit = await git.show();
 ```
 
-### `git.status()`
+### `git.status(): Promise<FileStatuses>`
 
-Returns array of changed files in current repo.
+Returns array of [changed files](https://github.com/verkholantsev/better-git/blob/master/src/parse-status.js#L16) in
+current repo.
 
 ```js
 const status = await git.status();

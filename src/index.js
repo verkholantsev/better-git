@@ -25,8 +25,8 @@ type BetterGit = {|
     commit: (opts?: Opts) => Promise<string>,
     getRemotes: () => Promise<Remotes>,
     init: (opts?: Opts) => Promise<string>,
-    raw: (args: GitArgs) => Promise<string>,
     log: (opts?: Opts) => Promise<Array<Commit>>,
+    raw: (args: GitArgs) => Promise<string>,
     show: (opts?: Opts) => Promise<Commit>,
     status: (opts?: Opts) => Promise<FileStatuses>,
 |};
