@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parseCommits() should return correct output if input contains several commits 1`] = `
+Array [
+  Object {
+    "changedFiles": Array [
+      Object {
+        "destination": "second-file",
+        "source": "one-file",
+      },
+    ],
+    "commit": "a",
+    "diff": "diff --git a/one-file b/second-file
+bla-bla",
+  },
+  Object {
+    "changedFiles": Array [
+      Object {
+        "destination": "fourth-file",
+        "source": "third-file",
+      },
+    ],
+    "commit": "b",
+    "diff": "diff --git a/third-file b/fourth-file
+bla-bla",
+  },
+]
+`;

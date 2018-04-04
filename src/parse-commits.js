@@ -34,17 +34,19 @@ export default function parseCommits(inputText: string): Array<Commit> {
         if (line.startsWith('commit')) {
             if (commitMessageBuffer.length > 0) {
                 assignToLastCommit(commits, { message: commitMessageBuffer.join('\n') });
+                commitMessageBuffer = [];
             }
             if (diffBuffer.length > 0) {
                 assignToLastCommit(commits, { diff: diffBuffer.join('\n') });
+                diffBuffer = [];
             }
             if (changedFilesBuffer.length > 0) {
                 assignToLastCommit(commits, { changedFiles: changedFilesBuffer });
+                changedFilesBuffer = [];
             }
 
             const commit = line.replace(/^commit\s*/, '');
             commits.push({ commit });
-            commitMessageBuffer = [];
             state = ParseState.HEADER;
         } else if (line.startsWith('Merge:')) {
             const merge = line.replace(/^Merge:\s*/, '').split(/\s+/);
