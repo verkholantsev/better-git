@@ -1,5 +1,5 @@
-[![Build Status](https://img.shields.io/travis/verkholantsev/better-git.svg)](https://travis-ci.org/verkholantsev/better-git)
-[![Coverage report](https://img.shields.io/coveralls/github/verkholantsev/better-git.svg)](https://coveralls.io/github/verkholantsev/better-git)
+[![Build Status](https://travis-ci.org/verkholantsev/better-git.svg?branch=master)](https://travis-ci.org/verkholantsev/better-git)
+[![Coverage Status](https://coveralls.io/repos/github/verkholantsev/better-git/badge.svg?branch=master)](https://coveralls.io/github/verkholantsev/better-git?branch=master)
 
 # 🌱 `better-git`
 
