@@ -32,7 +32,7 @@ const betterGit = require('better-git');
 const git = betterGit({ cwd: '/absolute/path/to/git/repo' });
 ```
 
-## Usage
+## API
 
 ### `git.add(opts: { [string]: mixed }): Promise<string>`
 
