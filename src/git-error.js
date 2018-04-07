@@ -6,6 +6,9 @@ type Opts = {
     stderr: string,
 };
 
+/**
+ * Represents git error. Includes exit code, standard output and standard error.
+ */
 export default class GitError extends Error {
     code: number;
 
