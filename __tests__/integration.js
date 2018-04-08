@@ -1,17 +1,16 @@
 // @flow
 
+// $FlowFixMe ignore next import
+import betterGit from '../';
 import fs from 'fs';
-import path from 'path';
 import os from 'os';
-import rimraf from 'rimraf';
+import path from 'path';
 import promisify from 'util.promisify';
+import rimraf from 'rimraf';
 
 const mkdir = promisify(fs.mkdir);
 const rmdir = promisify(rimraf);
 const writeFile = promisify(fs.writeFile);
-
-// $FlowFixMe ignore this import
-import betterGit from '../';
 
 describe('integration test', () => {
     let repoDir;

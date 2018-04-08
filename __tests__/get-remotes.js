@@ -1,10 +1,9 @@
 // @flow
 
 import fs from 'fs';
+import getRemotes from '../src/get-remotes';
 import path from 'path';
 import promisify from 'util.promisify';
-
-import getRemotes from '../src/get-remotes';
 
 const readFile = promisify(fs.readFile);
 

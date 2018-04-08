@@ -31,7 +31,8 @@ module.exports = {
             "error",
             "always"
         ],
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "sort-imports": "error"
     },
     "plugins": [
         "prettier",

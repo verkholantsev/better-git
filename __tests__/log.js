@@ -1,10 +1,9 @@
 // @flow
 
 import fs from 'fs';
+import log from '../src/log';
 import path from 'path';
 import promisify from 'util.promisify';
-
-import log from '../src/log';
 
 const readFile = promisify(fs.readFile);
 
