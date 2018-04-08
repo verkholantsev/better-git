@@ -1,10 +1,10 @@
-// @flow
+'use strict';
 
 const spawn = require('spawndamnit');
 
-module.exports = async function jestGlobalSetup() {
+module.exports = function jestGlobalSetup() {
     // eslint-disable-next-line no-console
     console.log('Building package to use in integration tests');
 
-    await spawn('yarn', ['build'], { stdio: 'inherit' });
+    return spawn('yarn', ['build'], { stdio: 'inherit' });
 };
