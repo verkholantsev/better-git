@@ -7,7 +7,7 @@ import parseRemotes from './parse-remotes';
 
 export default async function getRemotes(git: Git): Promise<Remotes> {
     const args = ['remote', '-v'];
-    const out = await git(args);
+    const out = await git.exec(args);
 
     return parseRemotes(out);
 }

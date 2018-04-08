@@ -12,6 +12,6 @@ export default async function add(git: Git, opts: Opts = {}): Promise<string> {
     checkSupportedOpts('add', opts, SUPPORTED_OPTS);
 
     const args = ['add', mapOpts(opts)];
-    const out = await git(args);
+    const out = await git.exec(args);
     return out;
 }

@@ -12,6 +12,6 @@ export default async function init(git: Git, opts: Opts = {}): Promise<string> {
     checkSupportedOpts('init', opts, SUPPORTED_OPTS);
 
     const args = ['init', ...mapOpts(opts)];
-    const out = await git(args);
+    const out = await git.exec(args);
     return out;
 }

@@ -6,13 +6,13 @@ describe('git.commit()', () => {
     let git;
 
     beforeEach(() => {
-        git = jest.fn(async () => 'out');
+        git = { exec: jest.fn(async () => 'out'), getRepoDir: () => '' };
     });
 
     it('should call git with correct args', async () => {
         await commit(git, { allowEmpty: true });
 
-        expect(git).toBeCalledWith(['commit', '--allow-empty']);
+        expect(git.exec).toBeCalledWith(['commit', '--allow-empty']);
     });
 
     it('should return correct output', async () => {

@@ -13,7 +13,10 @@ describe('git.show()', () => {
 
     beforeEach(() => {
         const fixturePath = path.resolve(__dirname, '__fixtures__', 'git-show');
-        git = jest.fn(async () => await readFile(fixturePath, { encoding: 'utf8' }));
+        git = {
+            exec: jest.fn(async () => await readFile(fixturePath, { encoding: 'utf8' })),
+            getRepoDir: () => '',
+        };
     });
 
     it('should produce correct output', async () => {
@@ -22,18 +25,18 @@ describe('git.show()', () => {
 
     it('should call git with correct args', async () => {
         await show(git);
-        expect(git).toBeCalledWith(['show']);
+        expect(git.exec).toBeCalledWith(['show']);
     });
 
     it('should throw error if there are no commits in git output', async () => {
-        const git = async () => '';
+        const git = { exec: async () => '', getRepoDir: () => '' };
         await expect(show(git)).rejects.toThrow(
             'Output for `git show` does not contain commits, it should contain exact one'
         );
     });
 
     it('should throw error if there are more than one commit in git output', async () => {
-        const git = async () => 'commit 1\ncommit2';
+        const git = { exec: async () => 'commit 1\ncommit2', getRepoDir: () => '' };
         await expect(show(git)).rejects.toThrow(
             'Output for `git show` contains more that one commit, it should contain only one'
         );

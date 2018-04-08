@@ -12,7 +12,10 @@ describe('git.log()', () => {
 
     beforeEach(() => {
         const fixturePath = path.resolve(__dirname, '__fixtures__', 'git-log');
-        git = jest.fn(async () => await readFile(fixturePath, { encoding: 'utf8' }));
+        git = {
+            exec: jest.fn(async () => await readFile(fixturePath, { encoding: 'utf8' })),
+            getRepoDir: () => '',
+        };
     });
 
     it('should produce correct output', async () => {
@@ -22,7 +25,7 @@ describe('git.log()', () => {
     it('should call git with correct args', async () => {
         await log(git, { maxCount: 100 });
 
-        expect(git).toBeCalledWith(['log', '--max-count=100']);
+        expect(git.exec).toBeCalledWith(['log', '--max-count=100']);
     });
 
     it('should throw error if being called with unsupported opts', async () => {

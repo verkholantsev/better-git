@@ -12,7 +12,10 @@ describe('git.getRemotes()', () => {
 
     beforeEach(() => {
         const fixturePath = path.resolve(__dirname, '__fixtures__', 'git-remote-v');
-        git = jest.fn(async () => await readFile(fixturePath, { encoding: 'utf8' }));
+        git = {
+            exec: jest.fn(async () => await readFile(fixturePath, { encoding: 'utf8' })),
+            getRepoDir: () => '',
+        };
     });
 
     it('should produce correct output', async () => {
@@ -22,18 +25,21 @@ describe('git.getRemotes()', () => {
     it('should call git with correct args', async () => {
         await getRemotes(git);
 
-        expect(git).toBeCalledWith(['remote', '-v']);
+        expect(git.exec).toBeCalledWith(['remote', '-v']);
     });
 
     describe('should throw an error', () => {
         it('for unexpeced line in git output', async () => {
-            const git = async () => 'bla';
+            const git = { exec: async () => 'bla', getRepoDir: () => '' };
             await expect(getRemotes(git)).rejects.toThrow('Unexpected line in remote output "bla"');
         });
 
         it('for duplicated line in git output', async () => {
-            const git = async () =>
-                'origin\tgit@github.com:yarnpkg/yarn.git (fetch)\norigin\tgit@github.com:yarnpkg/yarn.git (fetch)';
+            const git = {
+                exec: async () =>
+                    'origin\tgit@github.com:yarnpkg/yarn.git (fetch)\norigin\tgit@github.com:yarnpkg/yarn.git (fetch)',
+                getRepoDir: () => '',
+            };
 
             await expect(getRemotes(git)).rejects.toThrow('Ref type "fetch" for remote "origin" already exists');
         });

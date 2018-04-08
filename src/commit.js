@@ -12,6 +12,6 @@ export default async function commit(git: Git, opts: Opts = {}): Promise<string>
     checkSupportedOpts('commit', opts, SUPPORTED_OPTS);
 
     const args = ['commit', mapOpts(opts)];
-    const out = await git(args);
+    const out = await git.exec(args);
     return out;
 }

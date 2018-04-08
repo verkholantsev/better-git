@@ -13,7 +13,7 @@ describe('git.status()', () => {
 
     beforeEach(() => {
         const fixturePath = path.resolve(__dirname, '__fixtures__', 'status-porcelain');
-        git = jest.fn(async () => await readFile(fixturePath, { encoding: 'utf8' }));
+        git = { exec: jest.fn(async () => await readFile(fixturePath, { encoding: 'utf8' })), getRepoDir: () => '' };
     });
 
     it('should return correct output', async () => {
@@ -23,6 +23,6 @@ describe('git.status()', () => {
     it('should call git with correct args', async () => {
         await status(git);
 
-        expect(git).toBeCalledWith(['status', '--porcelain']);
+        expect(git.exec).toBeCalledWith(['status', '--porcelain']);
     });
 });

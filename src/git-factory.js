@@ -15,7 +15,10 @@ export type RepoOpts = {
 
 export type GitArgs = Array<string>;
 
-export type Git = (args: GitArgs) => Promise<string>;
+export type Git = {|
+    exec: (args: GitArgs) => Promise<string>,
+    getRepoDir: () => string,
+|};
 
 function getTmpDir(): string {
     const timestamp = new Date().getTime();
@@ -26,7 +29,7 @@ function getTmpDir(): string {
 export default function gitFactory(repoOpts?: RepoOpts = {}) {
     const { dir = getTmpDir() } = repoOpts;
 
-    return async function git(args: GitArgs): Promise<string> {
+    async function exec(args: GitArgs): Promise<string> {
         try {
             gitInputDebug('git', args);
 
@@ -50,5 +53,11 @@ export default function gitFactory(repoOpts?: RepoOpts = {}) {
 
             throw error;
         }
-    };
+    }
+
+    function getRepoDir() {
+        return dir;
+    }
+
+    return { exec, getRepoDir };
 }

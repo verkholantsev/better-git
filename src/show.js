@@ -14,7 +14,7 @@ export default async function show(git: Git, opts: Opts = {}): Promise<Commit> {
     checkSupportedOpts('show', opts, SUPPORTED_OPTS);
 
     const args = ['show', ...mapOpts(opts)];
-    const out = await git(args);
+    const out = await git.exec(args);
     const commits = parseCommits(out);
 
     if (commits.length > 1) {

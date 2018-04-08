@@ -14,6 +14,6 @@ export default async function log(git: Git, opts: Opts = {}): Promise<Array<Comm
     checkSupportedOpts('log', opts, SUPPORTED_OPTS);
 
     const args = ['log', mapOpts(opts)];
-    const out = await git(args);
+    const out = await git.exec(args);
     return parseCommits(out);
 }
