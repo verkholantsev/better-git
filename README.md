@@ -109,6 +109,11 @@ current repo.
 const status = await git.status();
 ```
 
+## Debug
+
+Set environment variable `DEBUG=better-git:*` to enable debug output. This will make `better-git` log git commands it
+spawns and log stdout/stderr of these commands.
+
 ## Similar packages
 
 1.  `simple-git` https://github.com/steveukx/git-js
