@@ -20,5 +20,5 @@ module.exports = {
         }),
         commonjs(),
     ],
-    external: ['lodash/partial', 'lodash/kebabCase', 'spawndamnit', 'debug', 'os', 'path'],
+    external: ['debug', 'lodash/kebabCase', 'lodash/partial', 'os', 'path', 'rimraf', 'spawndamnit', 'util.promisify'],
 };
