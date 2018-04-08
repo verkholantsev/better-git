@@ -49,6 +49,7 @@
         "node": ">=6"
     },
     "jest": {
-        "coveragePathIgnorePatterns": ["/node_modules/", "<rootDir>/dist/"]
+        "coveragePathIgnorePatterns": ["/node_modules/", "<rootDir>/dist/"],
+        "globalSetup": "<rootDir>/scripts/jest-global-setup.js"
     }
 }
