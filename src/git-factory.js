@@ -62,7 +62,7 @@ export default function gitFactory(repoOpts?: RepoOpts = {}) {
         }
     }
 
-    function getRepoDir() {
+    function getRepoDir(): string {
         return dir;
     }
 
