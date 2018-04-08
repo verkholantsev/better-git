@@ -15,8 +15,12 @@ export type RepoOpts = {
 
 export type GitArgs = Array<string>;
 
+type SpawnArgs = {
+    dir?: string,
+};
+
 export type Git = {|
-    exec: (args: GitArgs) => Promise<string>,
+    exec: (gitArgs: GitArgs, spawnArgs?: SpawnArgs) => Promise<string>,
     getRepoDir: () => string,
 |};
 
@@ -29,11 +33,14 @@ function getTmpDir(): string {
 export default function gitFactory(repoOpts?: RepoOpts = {}) {
     const { dir = getTmpDir() } = repoOpts;
 
-    async function exec(args: GitArgs): Promise<string> {
+    async function exec(gitArgs: GitArgs, spawnArgs?: SpawnArgs = {}): Promise<string> {
         try {
-            gitInputDebug('git', args);
+            gitInputDebug('git', gitArgs);
 
-            const out = await spawn('git', args, { cwd: dir, shell: true });
+            const out = await spawn('git', gitArgs, {
+                cwd: spawnArgs.dir || dir,
+                shell: true,
+            });
             const stdout = out.stdout.toString('utf8');
             const stderr = out.stderr.toString('utf8');
             const { code } = out;

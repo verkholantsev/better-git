@@ -42,13 +42,13 @@ Adds files to staged area.
 await git.add({ all: true });
 ```
 
-### `git.clone(url: string, dirname: string): Promise<string>`
+### `git.clone(url: string): Promise<string>`
 
-Clones repo from `url` in `dir` using `dirname` as a directory name for repo.
+Clones repo from `url` in `dir` (specified during initialisation).
 
 ```js
-const git = betterGit({ dir: '/Users/user/tmp' });
-await git.clone('git@github.com:verkholantsev/better-git.git', 'better-git');
+const git = betterGit({ dir: '/Users/user/tmp/better-git' });
+await git.clone('git@github.com:verkholantsev/better-git.git');
 ```
 
 ### `git.commit(opts: { [string]: mixed }): Promise<string>`

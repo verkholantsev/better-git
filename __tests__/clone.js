@@ -6,17 +6,17 @@ describe('git.clone()', () => {
     let git;
 
     beforeEach(() => {
-        git = { exec: jest.fn(async () => 'out'), getRepoDir: () => '' };
+        git = { exec: jest.fn(async () => 'out'), getRepoDir: () => '/some/dirname' };
     });
 
     it('should call git with correct args', async () => {
-        await clone(git, 'url', 'dirname');
+        await clone(git, 'url');
 
-        expect(git.exec).toBeCalledWith(['clone', 'url', 'dirname']);
+        expect(git.exec).toBeCalledWith(['clone', 'url', 'dirname'], { dir: '/some' });
     });
 
     it('should return correct output', async () => {
-        const out = await clone(git, 'url', 'dirname');
+        const out = await clone(git, 'url');
 
         expect(out).toBe('out');
     });
