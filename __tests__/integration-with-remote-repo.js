@@ -7,7 +7,7 @@ jest.setTimeout(10000);
 
 describe('withRemoteRepo integration test', () => {
     it('should work correctly', async () => {
-        const REPO_URL = 'git@github.com:verkholantsev/better-git.git';
+        const REPO_URL = 'https://github.com/verkholantsev/better-git.git';
         const git = betterGit();
 
         await git.withRemoteRepo(REPO_URL, async () => {
