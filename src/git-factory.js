@@ -2,27 +2,35 @@
 
 import GitError from './git-error';
 import debug from 'debug';
+import os from 'os';
+import path from 'path';
 import spawn from 'spawndamnit';
 
 const gitInputDebug = debug('better-git:input');
 const gitOutputDebug = debug('better-git:output');
 
 export type RepoOpts = {
-    cwd?: string,
+    dir?: string,
 };
 
 export type GitArgs = Array<string>;
 
 export type Git = (args: GitArgs) => Promise<string>;
 
+function getTmpDir(): string {
+    const timestamp = new Date().getTime();
+    const repoDirName = `better-git-${String(timestamp)}`;
+    return path.join(os.tmpdir(), repoDirName);
+}
+
 export default function gitFactory(repoOpts?: RepoOpts = {}) {
-    const { cwd = process.cwd() } = repoOpts;
+    const { dir = getTmpDir() } = repoOpts;
 
     return async function git(args: GitArgs): Promise<string> {
         try {
             gitInputDebug('git', args);
 
-            const out = await spawn('git', args, { cwd, shell: true });
+            const out = await spawn('git', args, { cwd: dir, shell: true });
             const stdout = out.stdout.toString('utf8');
             const stderr = out.stderr.toString('utf8');
             const { code } = out;

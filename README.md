@@ -29,7 +29,7 @@ import betterGit from 'better-git';
 const betterGit = require('better-git');
 
 // Create `git` object
-const git = betterGit({ cwd: '/absolute/path/to/git/repo' });
+const git = betterGit({ dir: '/absolute/path/to/git/repo' });
 ```
 
 ## API
@@ -44,10 +44,10 @@ await git.add({ all: true });
 
 ### `git.clone(url: string, dirname: string): Promise<string>`
 
-Clones repo from `url` in `cwd` using `dirname` as a directory name for repo.
+Clones repo from `url` in `dir` using `dirname` as a directory name for repo.
 
 ```js
-const git = betterGit({ cwd: '/Users/user/tmp' });
+const git = betterGit({ dir: '/Users/user/tmp' });
 await git.clone('git@github.com:verkholantsev/better-git.git', 'better-git');
 ```
 
@@ -69,9 +69,10 @@ const remotes = await git.getRemotes();
 
 ### `git.init(): Promise<string>`
 
-Inits git repo in cwd directory (specified during initialisation).
+Inits git repo in `dir` directory (specified during initialisation).
 
 ```js
+const git = betterGit({ dir: '/Users/user/tmp' });
 await git.init();
 ```
 

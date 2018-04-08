@@ -20,7 +20,7 @@ describe('integration test', () => {
         const tmpdir = os.tmpdir();
         repoDir = path.join(tmpdir, 'better-git-test-repo');
         mkdir(repoDir);
-        git = betterGit({ cwd: repoDir });
+        git = betterGit({ dir: repoDir });
     });
 
     afterAll(async () => {
