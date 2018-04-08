@@ -114,6 +114,17 @@ const status = await git.status();
 Set environment variable `DEBUG=better-git:*` to enable debug output. This will make `better-git` log git commands it
 spawns and log stdout/stderr of these commands.
 
+```
+  better-git:input git [ 'init' ] +0ms
+  better-git:output { stdout: 'Initialized empty Git repository in /private/var/folders/vx/f7cd9hkn3j75d9pgf6xlnjb80000gp/T/better-git-test-repo/.git/\n',                                 better-git:output   stderr: '',                                                                                                                                                          better-git:output   code: 0 } +0ms
+  better-git:input git [ 'remote', '-v' ] +45ms
+  better-git:output { stdout: '', stderr: '', code: 0 } +10ms
+  better-git:input git [ 'status', '--porcelain' ] +13ms
+  better-git:output { stdout: '?? some-file\n', stderr: '', code: 0 } +18ms
+
+  ...
+```
+
 ## Similar packages
 
 1.  `simple-git` https://github.com/steveukx/git-js
