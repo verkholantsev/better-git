@@ -114,7 +114,7 @@ const status = await git.status();
 Clones repo to `dir` directory (will create temporary directory is `dir` is not specified), executes `fn` function and deletes `dir` after that.
 
 ```js
-cosnt git = betterGit();
+const git = betterGit();
 await git.withRemoteRepo('https://github.com/verkholantsev/better-git.git', async () => {
     await git.commit({ message: 'New empty commit', allowEmpty: true });
     await git.push('origin', 'master');
