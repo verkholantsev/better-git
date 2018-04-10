@@ -1,10 +1,8 @@
 // @flow
 
+import mapOpts, { type Opts } from './map-opts';
 import type { Git } from './git-factory';
-import type { Opts } from './map-opts';
-
 import checkSupportedOpts from './check-supported-opts';
-import mapOpts from './map-opts';
 
 const SUPPORTED_OPTS = ['message', 'allowEmpty'];
 

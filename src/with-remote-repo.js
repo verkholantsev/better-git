@@ -1,7 +1,6 @@
 // @flow
 
 import type { Git } from './git-factory';
-
 import clone from './clone';
 import promisify from 'util.promisify';
 import rimraf from 'rimraf';

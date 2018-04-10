@@ -1,17 +1,15 @@
 // @flow
 
-import type { GitArgs, RepoOpts } from './git-factory';
+import gitFactory, { type GitArgs, type RepoOpts } from './git-factory';
 import type { Commit } from './parse-commits';
 import type { FileStatuses } from './parse-status';
 import type { Opts } from './map-opts';
 import type { Remotes } from './parse-remotes';
 import type { WithRemoteRepoFn } from './with-remote-repo';
-
 import add from './add';
 import clone from './clone';
 import commit from './commit';
 import getRemotes from './get-remotes';
-import gitFactory from './git-factory';
 import init from './init';
 import log from './log';
 import partial from 'lodash/partial';

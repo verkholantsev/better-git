@@ -1,7 +1,6 @@
 // @flow
 
 import type { Git } from './git-factory';
-
 import path from 'path';
 
 export default async function clone(git: Git, url: string) {
