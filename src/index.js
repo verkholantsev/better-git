@@ -1,22 +1,22 @@
 // @flow
 
-import gitFactory, { type GitArgs, type RepoOpts } from './git-factory';
+import partial from 'lodash/partial';
+
 import type { Commit } from './parse-commits';
 import type { FileStatuses } from './parse-status';
 import type { Opts } from './map-opts';
 import type { Remotes } from './parse-remotes';
-import type { WithRemoteRepoFn } from './with-remote-repo';
 import add from './add';
 import clone from './clone';
 import commit from './commit';
 import getRemotes from './get-remotes';
+import gitFactory, { type GitArgs, type RepoOpts } from './git-factory';
 import init from './init';
 import log from './log';
-import partial from 'lodash/partial';
 import raw from './raw';
 import show from './show';
 import status from './status';
-import withRemoteRepo from './with-remote-repo';
+import withRemoteRepo, { type WithRemoteRepoFn } from './with-remote-repo';
 
 type BetterGit = {|
     add: (opts?: Opts) => Promise<string>,

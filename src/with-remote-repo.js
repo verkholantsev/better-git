@@ -1,9 +1,11 @@
 // @flow
 
+import promisify from 'util.promisify';
+
+import rimraf from 'rimraf';
+
 import type { Git } from './git-factory';
 import clone from './clone';
-import promisify from 'util.promisify';
-import rimraf from 'rimraf';
 
 export type WithRemoteRepoFn<T> = () => Promise<T>;
 

@@ -1,10 +1,9 @@
 // @flow
 
-import mapOpts, { type Opts } from './map-opts';
-import type { Commit } from './parse-commits';
 import type { Git } from './git-factory';
 import checkSupportedOpts from './check-supported-opts';
-import parseCommits from './parse-commits';
+import mapOpts, { type Opts } from './map-opts';
+import parseCommits, { type Commit } from './parse-commits';
 
 const SUPPORTED_OPTS = ['maxCount'];
 

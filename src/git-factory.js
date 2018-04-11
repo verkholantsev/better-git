@@ -1,10 +1,13 @@
 // @flow
 
-import GitError from './git-error';
-import debug from 'debug';
 import os from 'os';
 import path from 'path';
+
 import spawn from 'spawndamnit';
+
+import debug from 'debug';
+
+import GitError from './git-error';
 
 const gitInputDebug = debug('better-git:input');
 const gitOutputDebug = debug('better-git:output');

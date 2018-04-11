@@ -1,7 +1,8 @@
 // @flow
 
-import type { Git } from './git-factory';
 import path from 'path';
+
+import type { Git } from './git-factory';
 
 export default async function clone(git: Git, url: string) {
     const repoDir = git.getRepoDir();
