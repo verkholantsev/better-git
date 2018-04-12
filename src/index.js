@@ -7,6 +7,8 @@ import type { FileStatuses } from './parse-status';
 import type { Opts } from './map-opts';
 import type { Remotes } from './parse-remotes';
 import add from './add';
+import branch from './branch';
+import checkoutBranch from './checkout-branch';
 import clone from './clone';
 import commit from './commit';
 import getRemotes from './get-remotes';
@@ -20,6 +22,8 @@ import withRemoteRepo, { type WithRemoteRepoFn } from './with-remote-repo';
 
 type BetterGit = {|
     add: (opts?: Opts) => Promise<string>,
+    branch: (opts?: Opts) => Promise<Array<string>>,
+    checkoutBranch: (branchName: string) => Promise<string>,
     clone: (url: string, dirname: string) => Promise<string>,
     commit: (opts?: Opts) => Promise<string>,
     getRemotes: () => Promise<Remotes>,
@@ -36,6 +40,8 @@ export default function betterGit(repoOpts?: RepoOpts): BetterGit {
 
     return {
         add: partial(add, git),
+        branch: partial(branch, git),
+        checkoutBranch: partial(checkoutBranch, git),
         clone: partial(clone, git),
         commit: partial(commit, git),
         getRemotes: partial(getRemotes, git),

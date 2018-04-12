@@ -1,12 +1,15 @@
 // @flow
 
-// $FlowFixMe ignore next import
-import betterGit from '../';
 import fs from 'fs';
 import os from 'os';
 import path from 'path';
+
 import promisify from 'util.promisify';
+
 import rimraf from 'rimraf';
+
+// $FlowFixMe ignore next import
+import betterGit from '../';
 
 const mkdir = promisify(fs.mkdir);
 const rmdir = promisify(rimraf);
@@ -98,6 +101,16 @@ describe('integration test', () => {
                     it('git.show() should return commit with diff containing `+Some content`', async () => {
                         const commit = await git.show();
                         expect(commit).toHaveProperty('diff', expect.stringContaining('+Some content'));
+                    });
+
+                    describe('after checking out branch', () => {
+                        beforeAll(async () => {
+                            await git.checkoutBranch('new-branch');
+                        });
+
+                        it('git.branch() should return two branches', async () => {
+                            expect(await git.branch()).toEqual(['master', 'new-branch']);
+                        });
                     });
                 });
             });
