@@ -11,7 +11,7 @@
     "dependencies": {
         "import-js": "^2.10.1",
         "lodash": "^4.17.5",
-        "spawndamnit": "^1.0.0",
+        "spawndamnit": "^2.0.0",
         "util.promisify": "^1.0.0"
     },
     "devDependencies": {
