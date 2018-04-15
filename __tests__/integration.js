@@ -8,6 +8,7 @@ import promisify from 'util.promisify';
 
 import rimraf from 'rimraf';
 
+// $FlowFixMe ignore this import
 import betterGit from '../';
 
 const mkdir = promisify(fs.mkdir);
