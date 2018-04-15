@@ -1,7 +1,9 @@
 // @flow
 
 import fs from 'fs';
+import os from 'os';
 import path from 'path';
+
 import promisify from 'util.promisify';
 
 import show from '../src/show';
@@ -36,7 +38,7 @@ describe('git.show()', () => {
     });
 
     it('should throw error if there are more than one commit in git output', async () => {
-        const git = { exec: async () => 'commit 1\ncommit2', getRepoDir: () => '' };
+        const git = { exec: async () => `commit 1${os.EOL}commit2`, getRepoDir: () => '' };
         await expect(show(git)).rejects.toThrow(
             'Output for `git show` contains more that one commit, it should contain only one'
         );

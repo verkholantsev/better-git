@@ -1,5 +1,7 @@
 // @flow
 
+import os from 'os';
+
 export type Branches = Array<Branch>;
 
 type Branch = {|
@@ -11,7 +13,7 @@ type Branch = {|
  * Parses output of `git branch` command
  */
 export default function parseBranches(input: string): Branches {
-    const lines = input.split('\n').filter(Boolean);
+    const lines = input.split(os.EOL).filter(Boolean);
 
     return lines.map(line => {
         const isCurrent = line.startsWith('* ');

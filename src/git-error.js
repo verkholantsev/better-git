@@ -1,5 +1,7 @@
 // @flow
 
+import os from 'os';
+
 type Opts = {
     code: number,
     stdout: string,
@@ -20,7 +22,7 @@ export default class GitError extends Error {
         const stdoutOrEmpty = stdout || '<empty>';
         const stderrOrEmpty = stderr || '<empty>';
 
-        super(`Git error (exit code ${code})\nstderr: ${stderrOrEmpty}\nstdout: ${stdoutOrEmpty}`);
+        super(`Git error (exit code ${code})${os.EOL}stderr: ${stderrOrEmpty}${os.EOL}stdout: ${stdoutOrEmpty}`);
         this.code = code;
         this.stdout = stdout;
         this.stderr = stderr;

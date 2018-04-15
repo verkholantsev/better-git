@@ -1,5 +1,7 @@
 // @flow
 
+import os from 'os';
+
 const ParseState = {
     HEADER: 0,
     MESSAGE: 1,
@@ -20,7 +22,7 @@ export type Commit = {
  * Parses output for both `git show` and `git log`.
  */
 export default function parseCommits(inputText: string): Array<Commit> {
-    const lines = inputText.split('\n');
+    const lines = inputText.split(os.EOL);
 
     const commits = [];
     let state = ParseState.HEADER;
@@ -33,11 +35,11 @@ export default function parseCommits(inputText: string): Array<Commit> {
 
         if (line.startsWith('commit')) {
             if (commitMessageBuffer.length > 0) {
-                assignToLastCommit(commits, { message: commitMessageBuffer.join('\n') });
+                assignToLastCommit(commits, { message: commitMessageBuffer.join(os.EOL) });
                 commitMessageBuffer = [];
             }
             if (diffBuffer.length > 0) {
-                assignToLastCommit(commits, { diff: diffBuffer.join('\n') });
+                assignToLastCommit(commits, { diff: diffBuffer.join(os.EOL) });
                 diffBuffer = [];
             }
             if (changedFilesBuffer.length > 0) {
@@ -73,10 +75,10 @@ export default function parseCommits(inputText: string): Array<Commit> {
     }
 
     if (commitMessageBuffer.length > 0) {
-        assignToLastCommit(commits, { message: commitMessageBuffer.join('\n') });
+        assignToLastCommit(commits, { message: commitMessageBuffer.join(os.EOL) });
     }
     if (diffBuffer.length > 0) {
-        assignToLastCommit(commits, { diff: diffBuffer.join('\n') });
+        assignToLastCommit(commits, { diff: diffBuffer.join(os.EOL) });
     }
     if (changedFilesBuffer.length > 0) {
         assignToLastCommit(commits, { changedFiles: changedFilesBuffer });

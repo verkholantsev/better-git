@@ -1,9 +1,12 @@
 // @flow
 
 import fs from 'fs';
-import getRemotes from '../src/get-remotes';
+import os from 'os';
 import path from 'path';
+
 import promisify from 'util.promisify';
+
+import getRemotes from '../src/get-remotes';
 
 const readFile = promisify(fs.readFile);
 
@@ -37,7 +40,9 @@ describe('git.getRemotes()', () => {
         it('for duplicated line in git output', async () => {
             const git = {
                 exec: async () =>
-                    'origin\tgit@github.com:yarnpkg/yarn.git (fetch)\norigin\tgit@github.com:yarnpkg/yarn.git (fetch)',
+                    `origin\tgit@github.com:yarnpkg/yarn.git (fetch)${
+                        os.EOL
+                    }origin\tgit@github.com:yarnpkg/yarn.git (fetch)`,
                 getRepoDir: () => '',
             };
 

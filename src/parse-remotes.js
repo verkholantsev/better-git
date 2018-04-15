@@ -1,5 +1,7 @@
 // @flow
 
+import os from 'os';
+
 const REMOTE_REGEX = /^(.+)\s(.+)\s\((.+)\)$/;
 
 export type Remote = {
@@ -10,7 +12,7 @@ export type Remote = {
 export type Remotes = Array<Remote>;
 
 export default function parseRemotes(inputText: string): Remotes {
-    const lines = inputText.split('\n').filter(Boolean);
+    const lines = inputText.split(os.EOL).filter(Boolean);
 
     const remotesMap: Map<string, Remote> = new Map();
 

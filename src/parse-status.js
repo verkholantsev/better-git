@@ -1,5 +1,7 @@
 // @flow
 
+import os from 'os';
+
 const RENAMED_REGEX = /^R\s(.+)\s->\s(.+)$/;
 const STATUS_REGEX = /^\s*[A-Z?]+\s+/;
 
@@ -16,7 +18,7 @@ type FileStatus = {
 export type FileStatuses = Array<FileStatus>;
 
 export default function parseStatus(inputText: string): Array<FileStatus> {
-    const lines = inputText.split('\n').filter(Boolean);
+    const lines = inputText.split(os.EOL).filter(Boolean);
 
     return lines.map(line => {
         if (line.startsWith('R ')) {
