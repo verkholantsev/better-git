@@ -2,6 +2,7 @@
 
 import partial from 'lodash/partial';
 
+import type { Branches } from './parse-branches';
 import type { Commit } from './parse-commits';
 import type { FileStatuses } from './parse-status';
 import type { Opts } from './map-opts';
@@ -22,7 +23,7 @@ import withRemoteRepo, { type WithRemoteRepoFn } from './with-remote-repo';
 
 type BetterGit = {|
     add: (opts?: Opts) => Promise<string>,
-    branch: (opts?: Opts) => Promise<Array<string>>,
+    branch: (opts?: Opts) => Promise<Branches>,
     checkoutBranch: (branchName: string) => Promise<string>,
     clone: (url: string, dirname: string) => Promise<string>,
     commit: (opts?: Opts) => Promise<string>,

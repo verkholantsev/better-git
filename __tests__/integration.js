@@ -109,7 +109,10 @@ describe('integration test', () => {
                         });
 
                         it('git.branch() should return two branches', async () => {
-                            expect(await git.branch()).toEqual(['master', 'new-branch']);
+                            expect(await git.branch()).toEqual([
+                                { name: 'master', isCurrent: false },
+                                { name: 'new-branch', isCurrent: true },
+                            ]);
                         });
                     });
                 });
