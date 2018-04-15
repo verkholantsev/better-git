@@ -8,7 +8,6 @@ import promisify from 'util.promisify';
 
 import rimraf from 'rimraf';
 
-// $FlowFixMe ignore next import
 import betterGit from '../';
 
 const mkdir = promisify(fs.mkdir);
@@ -37,6 +36,14 @@ describe('integration test', () => {
 
         it('git.getRemotes() should return empty array', async () => {
             expect(await git.getRemotes()).toHaveLength(0);
+        });
+
+        describe('after trying to create empty commit without `--allow-empty` parameter', () => {
+            it('should throw an error', () => {
+                expect(git.commit({ message: 'New commit' })).rejects.toThrow(
+                    /nothing added to commit but untracked files present/
+                );
+            });
         });
 
         describe('after creating a file', () => {
@@ -80,7 +87,7 @@ describe('integration test', () => {
 
                 describe('after first commit', () => {
                     beforeAll(async () => {
-                        await git.commit({ message: 'Commit', allowEmpty: true });
+                        await git.commit({ message: 'Commit' });
                     });
 
                     it('git.log() should return one commit', async () => {

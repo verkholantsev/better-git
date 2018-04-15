@@ -17,6 +17,8 @@ export default function mapOpts(opts: Opts): string {
 
             if (value === true) {
                 parameter = '--' + kebabCase(key);
+            } else if (typeof value === 'string') {
+                parameter = `--${kebabCase(key)}='${value}'`;
             } else {
                 parameter = `--${kebabCase(key)}=${String(value)}`;
             }
