@@ -37,32 +37,27 @@ export default function gitFactory(repoOpts?: RepoOpts = {}) {
     const { dir = getTmpDir() } = repoOpts;
 
     async function exec(gitArgs: GitArgs, spawnArgs?: SpawnArgs = {}): Promise<string> {
-        try {
-            gitInputDebug('git', gitArgs);
+        gitInputDebug('git', gitArgs);
 
-            const out = await spawn('git', gitArgs, {
-                cwd: spawnArgs.dir || dir,
-                shell: true,
+        const out = await spawn('git', gitArgs, {
+            cwd: spawnArgs.dir || dir,
+            shell: true,
+        });
+        const stdout = out.stdout.toString('utf8');
+        const stderr = out.stderr.toString('utf8');
+        const { code } = out;
+
+        gitOutputDebug({ stdout, stderr, code });
+
+        if (code !== 0) {
+            throw new GitError({
+                code,
+                stdout: stdout.toString('utf8').trim(),
+                stderr: stderr.toString('utf8').trim(),
             });
-            const stdout = out.stdout.toString('utf8');
-            const stderr = out.stderr.toString('utf8');
-            const { code } = out;
-
-            gitOutputDebug({ stdout, stderr, code });
-
-            return stdout.toString('utf8');
-        } catch (error) {
-            if (error instanceof spawn.ChildProcessError) {
-                const { code, stdout, stderr } = error;
-                throw new GitError({
-                    code,
-                    stdout: stdout.toString('utf8').trim(),
-                    stderr: stderr.toString('utf8').trim(),
-                });
-            }
-
-            throw error;
         }
+
+        return stdout.toString('utf8');
     }
 
     function getRepoDir(): string {
