@@ -42,6 +42,14 @@ Adds files to staged area.
 await git.add({ all: true });
 ```
 
+### `git.branch(opts: { [string]: mixed }): Promise<Branches>`
+
+Returns [array of branches](https://github.com/verkholantsev/better-git/blob/master/src/parse-branches.js#L5).
+
+### `git.checkoutBranch(branchName: string): Promise<string>`
+
+Creates new branch with `branchName` as a name.
+
 ### `git.clone(url: string): Promise<string>`
 
 Clones repo from `url` in `dir` (specified during initialisation).
