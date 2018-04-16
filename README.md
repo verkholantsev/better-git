@@ -46,9 +46,17 @@ await git.add({ all: true });
 
 Returns [array of branches](https://github.com/verkholantsev/better-git/blob/master/src/parse-branches.js#L5).
 
+```js
+const branches = await git.branch();
+```
+
 ### `git.checkoutBranch(branchName: string): Promise<string>`
 
 Creates new branch with `branchName` as a name.
+
+```js
+await git.checkoutBranch('new-branch');
+```
 
 ### `git.clone(url: string): Promise<string>`
 
