@@ -1,4 +1,4 @@
-## Roadmap
+## Roadmap for v0.1.0
 
 1.  Fix `withRemoteRepo` to delete only temporary repos
 2.  Implement `addRemote()`
