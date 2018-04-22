@@ -33,6 +33,9 @@ function getTmpDir(): string {
     return path.join(os.tmpdir(), repoDirName);
 }
 
+/**
+ * Creates instance that incapsulates interaction with git subprocess and stores data related to current git repo
+ */
 export default function gitFactory(repoOpts?: RepoOpts = {}) {
     const { dir = getTmpDir() } = repoOpts;
 
