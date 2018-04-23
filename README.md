@@ -157,7 +157,7 @@ current repo.
 const status = await git.status();
 ```
 
-### `git.withRemoteRepo<T>`
+### `git.withRemoteRepo`
 
 Clones repo to `dir` directory (will create temporary directory is `dir` is not specified), executes `fn` function and deletes `dir` after that.
 
