@@ -38,14 +38,14 @@ describe('withRemoteRepo integration test', () => {
             git = betterGit({ dir: repoDir });
         });
 
+        afterEach(async () => {
+            await rmdir(repoDir);
+        });
+
         it("should not delete repo's directory in the end", async () => {
             git.withRemoteRepo(REPO_URL, async () => {});
 
             expect(await stat(repoDir)).toEqual(expect.any(Object));
-        });
-
-        afterEach(async () => {
-            await rmdir(repoDir);
         });
     });
 });
