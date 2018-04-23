@@ -16,6 +16,7 @@ import getRemotes from './get-remotes';
 import gitFactory, { type GitArgs, type RepoOpts } from './git-factory';
 import init from './init';
 import log from './log';
+import pull from './pull';
 import raw from './raw';
 import show from './show';
 import status from './status';
@@ -30,6 +31,7 @@ type BetterGit = {|
     getRemotes: () => Promise<Remotes>,
     init: (opts?: Opts) => Promise<string>,
     log: (opts?: Opts) => Promise<Array<Commit>>,
+    pull: (remote: string, branch: string, opts?: Opts) => Promise<string>,
     raw: (args: GitArgs) => Promise<string>,
     show: (opts?: Opts) => Promise<Commit>,
     status: (opts?: Opts) => Promise<FileStatuses>,
@@ -48,6 +50,7 @@ export default function betterGit(repoOpts?: RepoOpts): BetterGit {
         getRemotes: partial(getRemotes, git),
         init: partial(init, git),
         log: partial(log, git),
+        pull: partial(pull, git),
         raw: partial(raw, git),
         show: partial(show, git),
         status: partial(status, git),

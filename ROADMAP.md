@@ -6,4 +6,3 @@
 4.  Implement `push()`
 5.  Implement `diff()`
 6.  Implement `fetch()`
-7.  Implement `pull()`

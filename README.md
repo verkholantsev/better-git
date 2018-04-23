@@ -100,6 +100,14 @@ Returns array of [commits](https://github.com/verkholantsev/better-git/blob/mast
 const commits = await git.log({ maxCount: 10 });
 ```
 
+### `git.pull(remote: string, branch: string, opts: { [string]: mixed }): Promise<string>`
+
+Pulls remote origin.
+
+```js
+await git.pull('origin', 'master', { rebase: true });
+```
+
 ### `git.raw(args: Array<string>): Promise<string>`
 
 Executes raw git command and returns unparsed output.
