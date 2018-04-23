@@ -34,110 +34,136 @@ const git = betterGit({ dir: '/absolute/path/to/git/repo' });
 
 ## API
 
-### `git.add(opts: { [string]: mixed }): Promise<string>`
+### `git.add`
 
 Adds files to staged area.
 
 ```js
+// git.add(opts: { [string]: mixed }): Promise<string>
+
 await git.add({ all: true });
 ```
 
-### `git.branch(opts: { [string]: mixed }): Promise<Branches>`
+### `git.branch`
 
 Returns [array of branches](https://github.com/verkholantsev/better-git/blob/master/src/parse-branches.js#L5).
 
 ```js
+// git.branch(opts: { [string]: mixed }): Promise<Branches>
+
 const branches = await git.branch();
 ```
 
-### `git.checkoutBranch(branchName: string): Promise<string>`
+### `git.checkoutBranch`
 
 Creates new branch with `branchName` as a name.
 
 ```js
+// git.checkoutBranch(branchName: string): Promise<string>
+
 await git.checkoutBranch('new-branch');
 ```
 
-### `git.clone(url: string): Promise<string>`
+### `git.clone`
 
 Clones repo from `url` in `dir` (specified during initialisation).
 
 ```js
+// git.clone(url: string): Promise<string>
+
 const git = betterGit({ dir: '/Users/user/tmp/better-git' });
 await git.clone('git@github.com:verkholantsev/better-git.git');
 ```
 
-### `git.commit(opts: { [string]: mixed }): Promise<string>`
+### `git.commit`
 
 Creates commit with specified message.
 
 ```js
+// git.commit(opts: { [string]: mixed }): Promise<string>
+
 await git.commit({ message: 'Create new commit' });
 ```
 
-### `git.getRemotes(): Promise<Remotes>`
+### `git.getRemotes`
 
 Returns array of [remote repos](https://github.com/verkholantsev/better-git/blob/master/src/parse-remotes.js#L5).
 
 ```js
+// git.getRemotes(): Promise<Remotes>
+
 const remotes = await git.getRemotes();
 ```
 
-### `git.init(): Promise<string>`
+### `git.init`
 
 Inits git repo in `dir` directory (specified during initialisation).
 
 ```js
+// git.init(): Promise<string>
+
 const git = betterGit({ dir: '/Users/user/tmp' });
 await git.init();
 ```
 
-### `git.log(opts: { [string]: mixed }): Promise<Array<Commit>>`
+### `git.log`
 
 Returns array of [commits](https://github.com/verkholantsev/better-git/blob/master/src/parse-commits.js#L9).
 
 ```js
+// git.log(opts: { [string]: mixed }): Promise<Array<Commit>>
+
 const commits = await git.log({ maxCount: 10 });
 ```
 
-### `git.pull(remote: string, branch: string, opts: { [string]: mixed }): Promise<string>`
+### `git.pull`
 
 Pulls remote origin.
 
 ```js
+// git.pull(remote: string, branch: string, opts: { [string]: mixed }): Promise<string>
+
 await git.pull('origin', 'master', { rebase: true });
 ```
 
-### `git.raw(args: Array<string>): Promise<string>`
+### `git.raw`
 
 Executes raw git command and returns unparsed output.
 
 ```js
+// git.raw(args: Array<string>): Promise<string>
+
 const output = await git.raw(['--help']);
 ```
 
-### `git.show(opts: { [string]: mixed }): Promise<Commit>`
+### `git.show`
 
 Returns detailed [commit](https://github.com/verkholantsev/better-git/blob/master/src/parse-commits.js#L9) information.
 
 ```js
+// git.show(opts: { [string]: mixed }): Promise<Commit>
+
 const commit = await git.show();
 ```
 
-### `git.status(): Promise<FileStatuses>`
+### `git.status`
 
 Returns array of [changed files](https://github.com/verkholantsev/better-git/blob/master/src/parse-status.js#L16) in
 current repo.
 
 ```js
+// git.status(): Promise<FileStatuses>
+
 const status = await git.status();
 ```
 
-### `git.withRemoteRepo<T>(url: string, fn: () => Promise<T>): Promise<T>`
+### `git.withRemoteRepo<T>`
 
 Clones repo to `dir` directory (will create temporary directory is `dir` is not specified), executes `fn` function and deletes `dir` after that.
 
 ```js
+// git.withRemoteRepo<T>(url: string, fn: () => Promise<T>): Promise<T>
+
 const git = betterGit();
 await git.withRemoteRepo('https://github.com/verkholantsev/better-git.git', async () => {
     await git.commit({ message: 'New empty commit', allowEmpty: true });
