@@ -194,6 +194,8 @@ Debug output example:
 1.  `simple-git` https://github.com/steveukx/git-js
 2.  `git` https://github.com/christkv/node-git
 
-## Author
+## License
 
-Aleksei Verkholantcev
+> MIT License
+
+&copy; 2018 Aleksei Verkholantcev
