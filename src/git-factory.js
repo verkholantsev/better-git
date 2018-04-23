@@ -1,13 +1,11 @@
 // @flow
 
-import os from 'os';
-import path from 'path';
-
 import spawn from 'spawndamnit';
 
 import debug from 'debug';
 
 import GitError from './git-error';
+import getTmpDirPath from './get-tmp-dir-path';
 
 const gitInputDebug = debug('better-git:input');
 const gitOutputDebug = debug('better-git:output');
@@ -27,17 +25,11 @@ export type Git = {|
     getRepoDir: () => string,
 |};
 
-function getTmpDir(): string {
-    const timestamp = new Date().getTime();
-    const repoDirName = `better-git-${String(timestamp)}`;
-    return path.join(os.tmpdir(), repoDirName);
-}
-
 /**
  * Creates instance that incapsulates interaction with git subprocess and stores data related to current git repo
  */
 export default function gitFactory(repoOpts?: RepoOpts = {}) {
-    const { dir = getTmpDir() } = repoOpts;
+    const { dir = getTmpDirPath() } = repoOpts;
 
     async function exec(gitArgs: GitArgs, spawnArgs?: SpawnArgs = {}): Promise<string> {
         gitInputDebug('git', gitArgs);

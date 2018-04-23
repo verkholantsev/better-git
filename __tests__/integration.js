@@ -1,7 +1,6 @@
 // @flow
 
 import fs from 'fs';
-import os from 'os';
 import path from 'path';
 
 import promisify from 'util.promisify';
@@ -10,6 +9,7 @@ import rimraf from 'rimraf';
 
 // $FlowFixMe ignore this import
 import betterGit from '../';
+import getTmpDirPath from '../src/get-tmp-dir-path';
 
 const mkdir = promisify(fs.mkdir);
 const rmdir = promisify(rimraf);
@@ -20,8 +20,7 @@ describe('integration test', () => {
     let git;
 
     beforeAll(async () => {
-        const tmpdir = os.tmpdir();
-        repoDir = path.join(tmpdir, 'better-git-test-repo');
+        repoDir = getTmpDirPath();
         mkdir(repoDir);
         git = betterGit({ dir: repoDir });
     });
