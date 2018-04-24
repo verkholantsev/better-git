@@ -85,6 +85,16 @@ Creates commit with specified message.
 await git.commit({ message: 'Create new commit' });
 ```
 
+### `git.fetch`
+
+Fetches remote repo.
+
+```js
+// git.fetch(remote?: string, opts?: { [string]: mixed }): Promise<string>
+
+await git.fetch('origin', { prune: true });
+```
+
 ### `git.getRemotes`
 
 Returns array of [remote repos](https://github.com/verkholantsev/better-git/blob/master/src/parse-remotes.js#L5).

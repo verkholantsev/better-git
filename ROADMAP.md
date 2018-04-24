@@ -5,4 +5,3 @@
 3.  Implement `addTag()`
 4.  Implement `push()`
 5.  Implement `diff()`
-6.  Implement `fetch()`

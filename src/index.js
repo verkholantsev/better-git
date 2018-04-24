@@ -12,6 +12,7 @@ import branch from './branch';
 import checkoutBranch from './checkout-branch';
 import clone from './clone';
 import commit from './commit';
+import fetch from './fetch';
 import getRemotes from './get-remotes';
 import gitFactory, { type GitArgs, type RepoOpts } from './git-factory';
 import init from './init';
@@ -28,6 +29,7 @@ type BetterGit = {|
     checkoutBranch: (branchName: string) => Promise<string>,
     clone: (url: string, dirname: string) => Promise<string>,
     commit: (opts?: Opts) => Promise<string>,
+    fetch: (remote?: string, opts?: Opts) => Promise<string>,
     getRemotes: () => Promise<Remotes>,
     init: (opts?: Opts) => Promise<string>,
     log: (opts?: Opts) => Promise<Array<Commit>>,
@@ -47,6 +49,7 @@ export default function betterGit(repoOpts?: RepoOpts): BetterGit {
         checkoutBranch: partial(checkoutBranch, git),
         clone: partial(clone, git),
         commit: partial(commit, git),
+        fetch: partial(fetch, git),
         getRemotes: partial(getRemotes, git),
         init: partial(init, git),
         log: partial(log, git),
