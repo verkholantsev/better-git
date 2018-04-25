@@ -28,6 +28,14 @@ describe('withRemoteRepo integration test', () => {
         });
     });
 
+    it('should not throw error calling git.fetch()', async () => {
+        const git = betterGit();
+
+        await git.withRemoteRepo(REPO_URL, async () => {
+            await git.fetch();
+        });
+    });
+
     describe("if repo's directory is specified in initialisation", () => {
         let repoDir;
         let git;
