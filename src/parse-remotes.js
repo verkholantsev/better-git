@@ -11,6 +11,9 @@ export type Remote = {
 
 export type Remotes = Array<Remote>;
 
+/**
+ * Parses output for `git remote`
+ */
 export default function parseRemotes(inputText: string): Remotes {
     const lines = inputText.split(os.EOL).filter(Boolean);
 
