@@ -3,6 +3,8 @@
 
 # 🌱 `better-git`
 
+![Logo](assets/better-git.svg?raw=true)
+
 `better-git` is a Node.js API for `git` that:
 
 1.  Has Promise interface (works with async/await)
