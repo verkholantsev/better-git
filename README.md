@@ -3,7 +3,9 @@
 
 # 🌱 `better-git`
 
-`better-git` is a Node.js API for `git` that:
+<img src="assets/better-git.png?raw=true" width="251px"/>
+
+This is a Node.js API for `git` that:
 
 1.  Has Promise interface (works with async/await)
 2.  Has [Flow](https://flow.org/) typings
