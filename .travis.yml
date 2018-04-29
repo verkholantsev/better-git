@@ -13,3 +13,5 @@ script:
 
 after_script:
     - yarn run publish:coverage
+
+cache: yarn
