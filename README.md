@@ -1,8 +1,6 @@
 [![Build Status](https://travis-ci.org/verkholantsev/better-git.svg?branch=master)](https://travis-ci.org/verkholantsev/better-git)
 [![Coverage Status](https://coveralls.io/repos/github/verkholantsev/better-git/badge.svg?branch=master)](https://coveralls.io/github/verkholantsev/better-git?branch=master)
 
-# 🌱 `better-git`
-
 <img src="assets/better-git.png?raw=true" width="251px"/>
 
 This is a Node.js API for `git` that:
