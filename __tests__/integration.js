@@ -19,18 +19,18 @@ describe('integration test', () => {
     let repoDir;
     let git;
 
-    beforeAll(async () => {
+    beforeEach(async () => {
         repoDir = getTmpDirPath();
         mkdir(repoDir);
         git = betterGit({ dir: repoDir });
     });
 
-    afterAll(async () => {
+    afterEach(async () => {
         rmdir(repoDir);
     });
 
     describe('after git init', () => {
-        beforeAll(async () => {
+        beforeEach(async () => {
             await git.init();
         });
 
@@ -40,14 +40,12 @@ describe('integration test', () => {
 
         describe('after trying to create empty commit without `--allow-empty` parameter', () => {
             it('should throw an error', () => {
-                expect(git.commit({ message: 'New commit' })).rejects.toThrow(
-                    /nothing added to commit but untracked files present/
-                );
+                expect(git.commit({ message: 'New commit' })).rejects.toThrow(/nothing to commit/);
             });
         });
 
         describe('after creating a file', () => {
-            beforeAll(async () => {
+            beforeEach(async () => {
                 const filename = path.join(repoDir, 'some-file');
                 await writeFile(filename, 'Some content');
             });
@@ -67,7 +65,7 @@ describe('integration test', () => {
             });
 
             describe('after adding file to staging area', () => {
-                beforeAll(async () => {
+                beforeEach(async () => {
                     await git.add({ all: true });
                 });
 
@@ -86,7 +84,7 @@ describe('integration test', () => {
                 });
 
                 describe('after first commit', () => {
-                    beforeAll(async () => {
+                    beforeEach(async () => {
                         await git.commit({ message: 'Commit' });
                     });
 
@@ -111,7 +109,7 @@ describe('integration test', () => {
                     });
 
                     describe('after checking out branch', () => {
-                        beforeAll(async () => {
+                        beforeEach(async () => {
                             await git.checkoutBranch('new-branch');
                         });
 
