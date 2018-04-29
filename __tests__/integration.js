@@ -21,12 +21,12 @@ describe('integration test', () => {
 
     beforeEach(async () => {
         repoDir = getTmpDirPath();
-        mkdir(repoDir);
+        await mkdir(repoDir);
         git = betterGit({ dir: repoDir });
     });
 
     afterEach(async () => {
-        rmdir(repoDir);
+        await rmdir(repoDir);
     });
 
     describe('after git init', () => {
@@ -39,8 +39,8 @@ describe('integration test', () => {
         });
 
         describe('after trying to create empty commit without `--allow-empty` parameter', () => {
-            it('should throw an error', () => {
-                expect(git.commit({ message: 'New commit' })).rejects.toThrow(/nothing to commit/);
+            it('should throw an error', async () => {
+                await expect(git.commit({ message: 'New commit' })).rejects.toThrow(/nothing to commit/);
             });
         });
 
