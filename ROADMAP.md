@@ -3,5 +3,4 @@
 1.  Fix `withRemoteRepo` to delete only temporary repos
 2.  Implement `addRemote()`
 3.  Implement `addTag()`
-4.  Implement `push()`
-5.  Implement `diff()`
+4.  Implement `diff()`

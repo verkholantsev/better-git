@@ -136,6 +136,16 @@ Pulls remote origin.
 await git.pull('origin', 'master', { rebase: true });
 ```
 
+### `git.push`
+
+Pushes `branch` to `remote`.
+
+```js
+// git.push(remote?: string, branch?: string, opts?: { [string]: mixed }): Promise<string>
+
+await git.push('origin', 'master', { force: true });
+```
+
 ### `git.raw`
 
 Executes raw git command and returns unparsed output.
