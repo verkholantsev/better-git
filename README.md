@@ -179,7 +179,8 @@ const status = await git.status();
 
 ### `git.withRemoteRepo`
 
-Clones repo to `dir` directory (will create temporary directory is `dir` is not specified), executes `fn` function and deletes `dir` after that.
+Clones repo to `dir` directory (will create temporary directory is `dir` is not specified), executes `fn` function.
+If temporary directory was used, deletes `dir` as a last step.
 
 ```js
 // git.withRemoteRepo<T>(url: string, fn: () => Promise<T>): Promise<T>
