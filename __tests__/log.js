@@ -15,6 +15,7 @@ describe('git.log()', () => {
         git = {
             exec: jest.fn(async () => await readFile(fixturePath, { encoding: 'utf8' })),
             getRepoDir: () => '',
+            isTmpDir: () => false,
         };
     });
 

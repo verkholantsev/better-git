@@ -18,6 +18,7 @@ describe('git.getRemotes()', () => {
         git = {
             exec: jest.fn(async () => await readFile(fixturePath, { encoding: 'utf8' })),
             getRepoDir: () => '',
+            isTmpDir: () => false,
         };
     });
 
@@ -33,7 +34,7 @@ describe('git.getRemotes()', () => {
 
     describe('should throw an error', () => {
         it('for unexpeced line in git output', async () => {
-            const git = { exec: async () => 'bla', getRepoDir: () => '' };
+            const git = { exec: async () => 'bla', getRepoDir: () => '', isTmpDir: () => false };
             await expect(getRemotes(git)).rejects.toThrow('Unexpected line in remote output "bla"');
         });
 
@@ -44,6 +45,7 @@ describe('git.getRemotes()', () => {
                         os.EOL
                     }origin\tgit@github.com:yarnpkg/yarn.git (fetch)`,
                 getRepoDir: () => '',
+                isTmpDir: () => false,
             };
 
             await expect(getRemotes(git)).rejects.toThrow('Ref type "fetch" for remote "origin" already exists');

@@ -6,7 +6,7 @@ describe('git.add()', () => {
     let git;
 
     beforeEach(() => {
-        git = { exec: jest.fn(async () => 'out'), getRepoDir: () => '' };
+        git = { exec: jest.fn(async () => 'out'), getRepoDir: () => '', isTmpDir: () => false };
     });
 
     it('should call git with correct args', async () => {

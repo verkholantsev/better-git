@@ -1,6 +1,5 @@
 ## Roadmap for v0.1.0
 
-1.  Fix `withRemoteRepo` to delete only temporary repos
-2.  Implement `addRemote()`
-3.  Implement `addTag()`
-4.  Implement `diff()`
+1.  Implement `addRemote()`
+2.  Implement `addTag()`
+3.  Implement `diff()`

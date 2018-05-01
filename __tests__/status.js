@@ -2,6 +2,7 @@
 
 import fs from 'fs';
 import path from 'path';
+
 import promisify from 'util.promisify';
 
 import status from '../src/status';
@@ -13,7 +14,11 @@ describe('git.status()', () => {
 
     beforeEach(() => {
         const fixturePath = path.resolve(__dirname, '__fixtures__', 'status-porcelain');
-        git = { exec: jest.fn(async () => await readFile(fixturePath, { encoding: 'utf8' })), getRepoDir: () => '' };
+        git = {
+            exec: jest.fn(async () => await readFile(fixturePath, { encoding: 'utf8' })),
+            getRepoDir: () => '',
+            isTmpDir: () => false,
+        };
     });
 
     it('should return correct output', async () => {

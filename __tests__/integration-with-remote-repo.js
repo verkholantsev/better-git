@@ -50,7 +50,7 @@ describe('withRemoteRepo integration test', () => {
             await rmdir(repoDir);
         });
 
-        it.skip("should not delete repo's directory in the end", async () => {
+        it("should not delete repo's directory in the end", async () => {
             await git.withRemoteRepo(REPO_URL, async () => {});
 
             expect(await stat(repoDir)).toEqual(expect.any(Object));

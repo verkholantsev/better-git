@@ -15,10 +15,14 @@ export default async function withRemoteRepo<T>(git: Git, url: string, fn: WithR
     await clone(git, url);
 
     let result;
+    let isTmpDir = false;
     try {
+        isTmpDir = git.isTmpDir();
         result = await fn();
     } finally {
-        await rmdir(git.getRepoDir());
+        if (isTmpDir) {
+            await rmdir(git.getRepoDir());
+        }
     }
 
     return result;

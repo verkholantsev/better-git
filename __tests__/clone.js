@@ -6,7 +6,7 @@ describe('git.clone()', () => {
     let git;
 
     beforeEach(() => {
-        git = { exec: jest.fn(async () => 'out'), getRepoDir: () => '/some/dirname' };
+        git = { exec: jest.fn(async () => 'out'), getRepoDir: () => '/some/dirname', isTmpDir: () => false };
     });
 
     it('should call git with correct args', async () => {

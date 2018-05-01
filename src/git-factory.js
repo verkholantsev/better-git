@@ -23,13 +23,23 @@ type SpawnArgs = {
 export type Git = {|
     exec: (gitArgs: GitArgs, spawnArgs?: SpawnArgs) => Promise<string>,
     getRepoDir: () => string,
+    isTmpDir: () => boolean,
 |};
 
 /**
  * Creates instance that incapsulates interaction with git subprocess and stores data related to current git repo
  */
-export default function gitFactory(repoOpts?: RepoOpts = {}) {
-    const { dir = getTmpDirPath() } = repoOpts;
+export default function gitFactory(repoOpts?: RepoOpts = {}): Git {
+    let dir;
+    let isTmpDir;
+
+    if (repoOpts.dir) {
+        dir = repoOpts.dir;
+        isTmpDir = false;
+    } else {
+        dir = getTmpDirPath();
+        isTmpDir = true;
+    }
 
     async function exec(gitArgs: GitArgs, spawnArgs?: SpawnArgs = {}): Promise<string> {
         gitInputDebug('git', gitArgs);
@@ -59,5 +69,5 @@ export default function gitFactory(repoOpts?: RepoOpts = {}) {
         return dir;
     }
 
-    return { exec, getRepoDir };
+    return { exec, getRepoDir, isTmpDir: () => isTmpDir };
 }
