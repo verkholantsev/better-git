@@ -44,7 +44,7 @@ Adds files to staged area.
 await git.add({ all: true });
 ```
 
-### `git.addTag'
+### `git.addTag`
 
 Adds annotated tag
 
