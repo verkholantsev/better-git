@@ -44,6 +44,16 @@ Adds files to staged area.
 await git.add({ all: true });
 ```
 
+### `git.addTag'
+
+Adds annotated tag
+
+```js
+// git.addTag(version: string, message: string): Promise<string>
+
+await git.addTag('v1.0.0', 'Version 1.0.0');
+```
+
 ### `git.branch`
 
 Returns [array of branches](https://github.com/verkholantsev/better-git/blob/master/src/parse-branches.js#L5).

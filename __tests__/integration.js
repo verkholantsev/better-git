@@ -108,6 +108,17 @@ describe('integration test', () => {
                         expect(commit).toHaveProperty('diff', expect.stringContaining('+Some content'));
                     });
 
+                    describe('after creating tag', () => {
+                        beforeEach(async () => {
+                            await git.addTag('v1.0.0', 'First version');
+                        });
+
+                        it('should return created tag in list of tags', async () => {
+                            const out = await git.raw(['tag']);
+                            expect(out.trim()).toBe('v1.0.0');
+                        });
+                    });
+
                     describe('after checking out branch', () => {
                         beforeEach(async () => {
                             await git.checkoutBranch('new-branch');
