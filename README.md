@@ -189,9 +189,9 @@ const status = await git.status();
 
 ### `git.tag`
 
-Returns list of tags.
+Returns array of tags.
 
-```
+```js
 const tags = await git.tag();
 ```
 
