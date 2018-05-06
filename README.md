@@ -192,6 +192,8 @@ const status = await git.status();
 Returns array of tags.
 
 ```js
+// git.tag(): Promise<Tags>
+
 const tags = await git.tag();
 ```
 
