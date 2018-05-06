@@ -7,6 +7,7 @@ import type { Commit } from './parse-commits';
 import type { FileStatuses } from './parse-status';
 import type { Opts } from './map-opts';
 import type { Remotes } from './parse-remotes';
+import type { Tags } from './parse-tag';
 import add from './add';
 import addTag from './add-tag';
 import branch from './branch';
@@ -23,6 +24,7 @@ import push from './push';
 import raw from './raw';
 import show from './show';
 import status from './status';
+import tag from './tag';
 import withRemoteRepo, { type WithRemoteRepoFn } from './with-remote-repo';
 
 type BetterGit = {|
@@ -41,6 +43,7 @@ type BetterGit = {|
     raw: (args: GitArgs) => Promise<string>,
     show: (opts?: Opts) => Promise<Commit>,
     status: (opts?: Opts) => Promise<FileStatuses>,
+    tag: () => Promise<Tags>,
     withRemoteRepo: <T>(url: string, fn: WithRemoteRepoFn<T>) => Promise<T>,
 |};
 
@@ -63,6 +66,7 @@ export default function betterGit(repoOpts?: RepoOpts): BetterGit {
         raw: partial(raw, git),
         show: partial(show, git),
         status: partial(status, git),
+        tag: partial(tag, git),
         withRemoteRepo: partial(withRemoteRepo, git),
     };
 }

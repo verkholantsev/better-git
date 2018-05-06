@@ -187,6 +187,14 @@ current repo.
 const status = await git.status();
 ```
 
+### `git.tag`
+
+Returns list of tags.
+
+```
+const tags = await git.tag();
+```
+
 ### `git.withRemoteRepo`
 
 Clones repo to `dir` directory (will create temporary directory is `dir` is not specified), executes `fn` function.

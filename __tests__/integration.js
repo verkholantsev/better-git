@@ -114,8 +114,8 @@ describe('integration test', () => {
                         });
 
                         it('should return created tag in list of tags', async () => {
-                            const out = await git.raw(['tag']);
-                            expect(out.trim()).toBe('v1.0.0');
+                            const tags = await git.tag();
+                            expect(tags).toEqual([{ name: 'v1.0.0' }]);
                         });
                     });
 
