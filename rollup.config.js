@@ -1,8 +1,37 @@
 'use strict';
 
-const commonjs = require('rollup-plugin-commonjs');
+const fs = require('fs');
+
 const babel = require('rollup-plugin-babel');
+const commonjs = require('rollup-plugin-commonjs');
+
 const pkg = require('./package.json');
+
+const babelrcContent = fs.readFileSync('./.babelrc', 'utf8');
+const babelrc = JSON.parse(babelrcContent);
+
+function extendBabelrc(babelrc) {
+    const presets = babelrc.presets.map(preset => {
+        if (!Array.isArray(preset)) {
+            return preset;
+        }
+
+        const [name, options] = preset;
+
+        if (name === 'env') {
+            const newOptions = Object.assign({}, options, {
+                modules: false,
+            });
+            return [name, newOptions];
+        }
+
+        return preset;
+    });
+
+    const plugins = babelrc.plugins.concat(['external-helpers']);
+
+    return Object.assign({}, babelrc, { plugins, presets, babelrc: false, exclude: 'node_modules/**' });
+}
 
 module.exports = {
     input: './src/index.js',
@@ -11,14 +40,6 @@ module.exports = {
         format: 'cjs',
         file: pkg.main,
     },
-    plugins: [
-        babel({
-            presets: [['env', { modules: false, targets: { node: '6' } }], 'flow'],
-            exclude: 'node_modules/**',
-            babelrc: false,
-            plugins: ['external-helpers'],
-        }),
-        commonjs(),
-    ],
+    plugins: [babel(extendBabelrc(babelrc)), commonjs()],
     external: ['debug', 'lodash/kebabCase', 'lodash/partial', 'os', 'path', 'rimraf', 'spawndamnit', 'util.promisify'],
 };
