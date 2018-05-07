@@ -7,9 +7,9 @@ environment:
 
 install:
     - ps: Install-Product node $env:nodejs_version
-    - yarn
+    - ps: yarn
 
 test_script:
-    - yarn lint
-    - yarn flow
-    - yarn test
+    - ps: yarn lint
+    - ps: yarn flow
+    - ps: yarn test
