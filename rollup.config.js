@@ -30,7 +30,12 @@ function extendBabelrc(babelrc) {
 
     const plugins = babelrc.plugins.concat(['external-helpers']);
 
-    return Object.assign({}, babelrc, { plugins, presets, babelrc: false, exclude: 'node_modules/**' });
+    return Object.assign({}, babelrc, {
+        babelrc: false,
+        exclude: 'node_modules/**',
+        plugins,
+        presets,
+    });
 }
 
 module.exports = {
