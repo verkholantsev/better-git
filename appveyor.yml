@@ -6,9 +6,11 @@ environment:
         - nodejs_version: "9"
 
 install:
-    - ps: echo 1
     - ps: Install-Product node $env:nodejs_version
     - ps: yarn
+
+build_script:
+    - ps: yarn build
 
 test_script:
     - ps: yarn lint
