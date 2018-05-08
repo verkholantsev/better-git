@@ -3,7 +3,7 @@
 import partial from 'lodash/partial';
 
 import type { Branches } from './parse-branches';
-import type { Commit } from './parse-commits';
+import type { Commit, Commits } from './parse-commits';
 import type { FileStatuses } from './parse-status';
 import type { Opts } from './map-opts';
 import type { Remotes } from './parse-remotes';
@@ -37,7 +37,7 @@ type BetterGit = {|
     fetch: (remote?: string, opts?: Opts) => Promise<string>,
     getRemotes: () => Promise<Remotes>,
     init: (opts?: Opts) => Promise<string>,
-    log: (opts?: Opts) => Promise<Array<Commit>>,
+    log: (opts?: Opts) => Promise<Commits>,
     pull: (remote: string, branch: string, opts?: Opts) => Promise<string>,
     push: (remote?: string, branch?: string, opts?: Opts) => Promise<string>,
     raw: (args: GitArgs) => Promise<string>,

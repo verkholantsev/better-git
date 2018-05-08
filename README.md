@@ -131,7 +131,7 @@ await git.init();
 Returns array of [commits](https://github.com/verkholantsev/better-git/blob/master/src/parse-commits.js#L9).
 
 ```js
-// git.log(opts: { [string]: mixed }): Promise<Array<Commit>>
+// git.log(opts: { [string]: mixed }): Promise<Commits>
 
 const commits = await git.log({ maxCount: 10 });
 ```

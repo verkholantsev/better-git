@@ -18,10 +18,12 @@ export type Commit = {
     message?: string,
 };
 
+export type Commits = Array<Commit>;
+
 /**
  * Parses output for both `git show` and `git log`.
  */
-export default function parseCommits(inputText: string): Array<Commit> {
+export default function parseCommits(inputText: string): Commits {
     const lines = inputText.split(os.EOL);
 
     const commits = [];
