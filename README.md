@@ -128,7 +128,7 @@ await git.init();
 
 ### `git.log`
 
-Returns array of [commits](https://github.com/verkholantsev/better-git/blob/master/src/parse-commits.js#L9).
+Returns array of [commits](https://github.com/verkholantsev/better-git/blob/master/src/parse-commits.js#L21).
 
 ```js
 // git.log(opts: { [string]: mixed }): Promise<Commits>
