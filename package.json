@@ -24,7 +24,7 @@
         "captain-git-hook": "^2.0.0",
         "coveralls": "^3.0.1",
         "debug": "^3.1.0",
-        "eslint": "^4.19.1",
+        "eslint": "^7.32.0",
         "eslint-config-prettier": "^2.9.0",
         "eslint-plugin-flowtype": "^2.49.3",
         "eslint-plugin-prettier": "^2.6.1",
